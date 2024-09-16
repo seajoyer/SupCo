@@ -36,8 +36,8 @@ nix develop github:seajoyer/Machine_units
 First, install dependencies, this is done differently in different systems:
 
 - A C++20 compatible compiler ([[https://clang.llvm.org/get_started.html][Clang]] in our case)
-- [[https://www.gnu.org/software/make/#download][Make build system]]
-- [[https://eigen.tuxfamily.org/][Eigen library]]
+- [[https://www.gnu.org/software/make/#download][Make]] build system
+- [[https://eigen.tuxfamily.org/][Eigen]] library
 
 **** Building
 
