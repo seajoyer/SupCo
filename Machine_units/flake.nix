@@ -39,19 +39,19 @@
           #!${pythonEnv}/bin/python
           import sys
           sys.path.insert(0, "${./.}")
-          exec(open("py/main.py").read())
+          exec(open("Machine_units/py/main.py").read())
         '';
 
       in {
         packages = {
-          cpp = cppProject;
-          py = pythonProject;
+          mch_uns-cpp = cppProject;
+          mch_uns-py = pythonProject;
           default = cppProject;
         };
 
         apps = {
-          cpp = flake-utils.lib.mkApp { drv = cppProject; };
-          py = flake-utils.lib.mkApp { drv = pythonProject; };
+          mch_uns-cpp = flake-utils.lib.mkApp { drv = cppProject; };
+          mch_uns-py = flake-utils.lib.mkApp { drv = pythonProject; };
           default = flake-utils.lib.mkApp { drv = cppProject; };
         };
 
@@ -85,9 +85,9 @@
             echo "Eigen ${pkgs.eigen.version}"
             echo "$(make --version | head -n 1)"
             echo ""
-            echo "Build C++ project:  nix build .#cpp"
-            echo "Run C++ project:    nix run   .#cpp"
-            echo "Run Python project: nix run   .#py"
+            echo "Build C++ project:  nix build .#mch_uns-cpp"
+            echo "Run C++ project:    nix run   .#mch_uns-cpp"
+            echo "Run Python project: nix run   .#mch_uns-py"
             echo ""
             echo "Happy coding!"
           '';

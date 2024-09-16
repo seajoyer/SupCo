@@ -3,7 +3,6 @@
 #include <Eigen/Core>
 
 using namespace std;
-using namespace Eigen;
 
 template<typename T>
 T mcheps(T init) {
@@ -32,25 +31,24 @@ T mchgiant(T init) {
     return giant;
 }
 
+template <typename T>
+void printMachineParams(T init) {
+    cout << endl;
+    if (!strcmp("f", typeid(T).name()))
+        cout << "Single-precision (float):" << endl;
+    else if (!strcmp("d", typeid(T).name()))
+        cout << "Double-precision (double):" << endl;
+    else if (!strcmp("N5Eigen4halfE", typeid(T).name()))
+        cout << "Half-precision (Eigen::half):" << endl;
+    else
+        cout << "UNKNOWN DATA TYPE" << endl;
+    cout << "  Epsilon:  " << mcheps<T>(T(init))   << endl;
+    cout << "  Dwarf:    " << mchdwarf<T>(T(init)) << endl;
+    cout << "  Giant:    " << mchgiant<T>(T(init)) << endl;
+}
+
 int main() {
-    cout << string(25, '-') << endl;
-
-    cout << "Half-precision (Eigen::half):" << endl;
-    cout << "  Epsilon:  " << mcheps<half>(half(1.0))   << endl;
-    cout << "  Dwarf:    " << mchdwarf<half>(half(1.0)) << endl;
-    cout << "  Giant:    " << mchgiant<half>(half(1.0)) << endl;
-
-    cout << endl;
-
-    cout << "Single-precision (float):" << endl;
-    cout << "  Epsilon:  " << mcheps<float>(1.0f)   << endl;
-    cout << "  Dwarf:    " << mchdwarf<float>(1.0f) << endl;
-    cout << "  Giant:    " << mchgiant<float>(1.0f) << endl;
-
-    cout << endl;
-
-    cout << "Double-precision (double):" << endl;
-    cout << "  Epsilon:  " << mcheps<double>(1.0)   << endl;
-    cout << "  Dwarf:    " << mchdwarf<double>(1.0) << endl;
-    cout << "  Giant:    " << mchgiant<double>(1.0) << endl;
+    printMachineParams<Eigen::half>(Eigen::half(1.0f));
+    printMachineParams<float>(1.0f);
+    printMachineParams<double>(1.0);
 }
