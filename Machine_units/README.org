@@ -20,9 +20,9 @@ The repo provides C++ and Python programs to determine machine epsilon, the maxi
 
 For happy Nix users, to build and run the project, it's enough to execute:
 #+begin_src shell
-nix run github:seajoyer/Machine_units .#cpp
+nix run github:seajoyer/Machine_units .#mch_uns-cpp
 #+end_src shell
-Change ~.#cpp~ to ~.#py~ to run the Python program.
+Replace ~.#mch_uns-cpp~ with ~.#mch_uns-py~ to run the Python program.
 
 You can also start an isolated development shell with all the dependencies by simply running:
 #+begin_src shell
@@ -65,7 +65,7 @@ First, install dependencies, this is done differently in different systems:
 To run the python program, execute:
 
 #+begin_src shell
-nix run github:seajoyer/Machine_units .#py
+nix run github:seajoyer/Machine_units .#mch_uns-py
 #+end_src shell
 
 To enter the isolated development shell with installed Python and NumPy:
@@ -93,4 +93,4 @@ Install them to your system.
    #+begin_src shell
    py/main.py
    #+end_src shell
-   Make sure that the ~main.py~ file is executable (on Unix-like: ~chmod u+x main.py~).
+   Make sure that the ~main.py~ file is executable (on Unix-like: ~chmod u+x py/main.py~).
