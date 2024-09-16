@@ -67,6 +67,13 @@ nix run github:seajoyer/Machine_units .#py
 
 *** Manually
 
+**** Prerequisites
+
+- Python itself
+- numpy library
+
+**** Running
+
 1. Clone the repo if haven't yet
    #+begin_src shell
    git clone https://github.com/seajoyer/Machine_units
