@@ -9,13 +9,22 @@ The repo provides C++ and Python programs to determine machine epsilon, the maxi
 ** Navigation
 - [[#cpp][Building C++]]
   - [[#cpp-nix][For Nix users]]
-  - [[#cpp-non-nix][Manually]]
+  - [[#cpp-manual][Manually]]
 - [[#python][Running Python]]
-  - [[#cpp-nix][For Nix users]]
-  - [[#cpp-non-nix][Manually]]
+  - [[#py-nix][For Nix users]]
+  - [[#py-manual][Manually]]
 
 ** Building C++
+:PROPERTIES:
+:ID:       3d45554c-b29e-4b5f-b7ae-7c61a1c53039
+:CUSTOM_ID: cpp
+:END:
+
 *** For Nix users
+:PROPERTIES:
+:ID:       07b77652-ec8b-4c96-93d5-9dcbf11e6346
+:CUSTOM_ID: cpp-nix
+:END:
 
 For happy Nix users, to build and run the project, it's enough to execute:
 #+begin_src shell
@@ -29,6 +38,10 @@ nix develop github:seajoyer/Machine_units
 #+end_src
 
 *** Manually
+:PROPERTIES:
+:ID:       200d57ac-0423-486d-accc-9f4ccda4e45e
+:CUSTOM_ID: cpp-manual
+:END:
 
 **** Prerequisites
 
@@ -58,14 +71,26 @@ First, install dependencies, this is done differently in different systems:
    ~make clean~ to clean the ~build~ directory
 
 ** Running Python
+:PROPERTIES:
+:ID:       a3df608d-d8bd-4c2f-a5e1-a6bc23b689c9
+:CUSTOM_ID: python
+:END:
 
 *** For Nix users
+:PROPERTIES:
+:ID:       3ba23974-97c3-4309-9308-dab18feb6f45
+:CUSTOM_ID: py-nix
+:END:
 
 #+begin_src shell
 nix run github:seajoyer/Machine_units .#py
 #+end_src
 
 *** Manually
+:PROPERTIES:
+:ID:       7165e214-2923-4a40-af88-a34cca3c20ed
+:CUSTOM_ID: py-manual
+:END:
 
 1. Clone the repo if haven't yet
    #+begin_src shell
