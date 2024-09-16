@@ -34,6 +34,7 @@ nix develop github:seajoyer/Machine_units
 **** Prerequisites
 
 First, install dependencies, this is done differently in different systems:
+
 - A C++20 compatible compiler ([[https://clang.llvm.org/get_started.html][Clang]] in our case)
 - [[https://www.gnu.org/software/make/#download][Make build system]]
 - [[https://eigen.tuxfamily.org/][Eigen library]]
@@ -61,8 +62,15 @@ First, install dependencies, this is done differently in different systems:
 
 *** For Nix users
 
+To run the python program, execute:
+
 #+begin_src shell
 nix run github:seajoyer/Machine_units .#py
+#+end_src shell
+
+To enter the isolated development shell with installed Python and NumPy:
+#+begin_src shell
+nix develop github:seajoyer/Machine_units
 #+end_src shell
 
 *** Manually
@@ -70,7 +78,9 @@ nix run github:seajoyer/Machine_units .#py
 **** Prerequisites
 
 - Python itself
-- numpy library
+- NumPy library
+
+Install them to your system.
 
 **** Running
 
