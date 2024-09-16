@@ -1,6 +1,6 @@
 * Homework on floating point numbers :NOTOC:
 
-C++ and python programs to determine machine epsilon, the maximum (giant), and minimum (dwarf) possible values of a floating-point number for different precisions:
+C++ and python programs to determine machine epsilon, the maximum (giant), and minimum (dwarf) possible values of a floating-point number of different precisions:
 
 - half-precision (16-bit)
 - single-precision (32-bit)
@@ -9,6 +9,7 @@ C++ and python programs to determine machine epsilon, the maximum (giant), and m
 ** There are 2 programs :TOC:
 - [[#homework-on-floating-point-numbers][Homework on floating point numbers]]
   - [[#building-c][Building C++]]
+  - [[#running-python][Running Python]]
 
 ** Building C++
 *** For Nix users
@@ -29,8 +30,9 @@ nix develop github:seajoyer/Machine_units
 
 **** Prerequisites
 
-- A C++20 compatible compiler (Clang recommended)
-- Make build system
+First, install dependencies, this is done differently in different systems:
+- A C++20 compatible compiler ([[https://clang.llvm.org/get_started.html][Clang]] in our case)
+- [[https://www.gnu.org/software/make/#download][Make build system]]
 - [[https://eigen.tuxfamily.org/][Eigen library]]
 
 **** Building
@@ -41,7 +43,7 @@ nix develop github:seajoyer/Machine_units
    cd Machine_units
    #+end_src
 
-2. Set the `EIGEN_PATH` environment variable to point to your Eigen installation:
+2. Set the ~EIGEN_PATH~ environment variable to point to your Eigen installation:
 
    On most Unix-like systems, Eigen installs to ~/usr/include/eigen3~ or ~/usr/local/include/eigen3~. You can set the variable like this:
    #+begin_src shell
@@ -52,3 +54,16 @@ nix develop github:seajoyer/Machine_units
    ~make~ to build
    ~make run~ to build & run
    ~make clean~ to clean the ~build~ directory
+
+** Running Python
+
+To run the Python implementation do:
+1. Clone the repo
+   #+begin_src shell
+   git clone https://github.com/seajoyer/Machine_units
+   cd Machine_units
+   #+end_src
+
+2. Run ~py/main.py~.
+
+   Make sure the ~main.py~ file is executable (~chmod u+x main.py~).
