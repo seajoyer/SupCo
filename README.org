@@ -1,27 +1,26 @@
-#+TITLE Homework on floating point numbers
+* Homework on floating point numbers :NOTOC:
 
-A program to determine machine epsilon, the maximum (giant), and minimum (dwarf) possible values of a floating-point number for different precisions:
+C++ and python programs to determine machine epsilon, the maximum (giant), and minimum (dwarf) possible values of a floating-point number for different precisions:
 
 - half-precision (16-bit)
 - single-precision (32-bit)
 - double-precision (64-bit)
 
 ** There are 2 programs :TOC:
+- [[#homework-on-floating-point-numbers][Homework on floating point numbers]]
   - [[#building-c][Building C++]]
 
 ** Building C++
 *** For Nix users
 
-For happy Nix users, to build and run the project, it's enough to execute the command:
-
+For happy Nix users, to build and run the project, it's enough to execute:
 #+begin_src shell
 nix run github:seajoyer/Machine_units .#lang
 #+end_src
 
-where `lang` can be either `cpp` or `py` to run the program in C++ or Python, respectively.
+where ~lang~ can be either ~cpp~ or ~py~ to run the program in C++ or Python, respectively.
 
 You can also start a self-contained, isolated shell with all the dependencies by simply running:
-
 #+begin_src shell
 nix develop github:seajoyer/Machine_units
 #+end_src
@@ -34,41 +33,22 @@ nix develop github:seajoyer/Machine_units
 - Make build system
 - [[https://eigen.tuxfamily.org/][Eigen library]]
 
-1. Install a C++20 compatible compiler (Clang recommended).
+**** Building
 
-2. Install Make if it's not already available on your system.
-
-3. Install the Eigen library:
-   - On Ubuntu or Debian:
-     #+begin_src shell
-     sudo apt-get install libeigen3-dev
-     #+end_src shell
-   - On macOS with Homebrew:
-     #+begin_src shell
-     brew install eigen
-     #+end_src
-   - For other systems, follow the installation instructions on the [[https://eigen.tuxfamily.org/][Eigen website]].
-
-4. Clone the repository:
+1. Clone the repository:
    #+begin_src shell
    git clone https://github.com/seajoyer/Machine_units
    cd Machine_units
    #+end_src
 
-5. Set the `EIGEN_PATH` environment variable to point to your Eigen installation:
-   - On most Unix-like systems, Eigen installs to `/usr/include/eigen3` or `/usr/local/include/eigen3`. You can set the variable like this:
-   #+begin_src shell
-     export EIGEN_PATH=/usr/include/eigen3
-   #+end_src
-   - If you installed Eigen in a different location, adjust the path accordingly.
+2. Set the `EIGEN_PATH` environment variable to point to your Eigen installation:
 
-6. Build the project:
+   On most Unix-like systems, Eigen installs to ~/usr/include/eigen3~ or ~/usr/local/include/eigen3~. You can set the variable like this:
    #+begin_src shell
-   make
+     export EIGEN_PATH=/path/to/eigen3
    #+end_src
 
-7. Run the project:
-   #+begin_src shell
-   make run
-   #+end_src
-
+3. And once you are ready:
+   ~make~ to build
+   ~make run~ to build & run
+   ~make clean~ to clean the ~build~ directory
