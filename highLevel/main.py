@@ -8,7 +8,7 @@ warnings.filterwarnings("ignore", category=RuntimeWarning)
 def mcheps(T, init):
     eps = init
 
-    while T(1.0) + eps > T(1.0):
+    while T(1.0) + eps / T(2.0) > T(1.0):
         eps /= T(2.0)
     return eps
 
