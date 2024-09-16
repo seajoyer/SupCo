@@ -68,11 +68,10 @@ nix run github:seajoyer/Machine_units .#py
 *** Manually
 
 1. Clone the repo if haven't yet
-#+begin_src shell
-git clone https://github.com/seajoyer/Machine_units
-cd Machine_units
-#+end_src shell
-
+   #+begin_src shell
+   git clone https://github.com/seajoyer/Machine_units
+   cd Machine_units
+   #+end_src shell
 2. Run ~py/main.py~.
 
    Make sure the ~main.py~ file is executable (~chmod u+x main.py~).
