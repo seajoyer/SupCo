@@ -1,0 +1,15 @@
+* Homework on floating point numbers
+
+A program to determine machine epsilon, the maximum (giant), and minimum (dwarf) possible values of a floating-point number for different precisions:
+
+- half-precision (16-bit)
+- single-precision (32-bit)
+- double-precision (64-bit)
+
+The repo provides 2 programs:
+
+#+TOC: headlines 2
+
+** C++
+
+** Python
