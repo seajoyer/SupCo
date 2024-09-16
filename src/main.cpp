@@ -7,11 +7,11 @@ using namespace Eigen;
 
 template<typename T>
 T mcheps(T init) {
-    T e = init;
+    T eps = init;
 
-    while (T(1.0) + e > T(1.0))
-        e /= T(2.0);
-    return e;
+    while (T(1.0) + eps > T(1.0))
+        eps /= T(2.0);
+    return eps;
 }
 
 template<typename T>

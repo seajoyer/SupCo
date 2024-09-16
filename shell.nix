@@ -37,6 +37,18 @@ pkgs.mkShell {
     buildScript
     cleanScript
     runScript
+
+    (python3.withPackages (ps:
+      with ps; [
+        numpy
+        pandas
+        pyright
+        matplotlib
+        jupyter
+        pytest
+        nose
+        pyflakes
+      ]))
   ];
 
   shellHook = ''
