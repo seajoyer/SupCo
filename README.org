@@ -40,18 +40,22 @@ First, install dependencies, this is done differently in different systems:
 
 **** Building
 
-1. Clone the repository:
+***** 1. Clone the repository
+
 #+begin_src shell
 git clone https://github.com/seajoyer/Machine_units
 cd Machine_units
 #+end_src shell
 
-2. Set the ~EIGEN_PATH~ environment variable to point to your Eigen installation.On most Unix-like systems, Eigen installs to ~/usr/include/eigen3~ or ~/usr/local/include/eigen3~. You can set the variable like this:
+***** 2. Set the ~EIGEN_PATH~ environment variable.
+
+On most Unix-like systems, Eigen installs to ~/usr/include/eigen3~ or ~/usr/local/include/eigen3~. You can set the variable like this:
+
 #+begin_src shell
 export EIGEN_PATH=/path/to/eigen3
 #+end_src shell
 
-3. And once you are ready:
+***** 3. And once you are ready:
 
    ~make~ to build
 
