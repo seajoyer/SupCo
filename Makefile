@@ -6,29 +6,17 @@ SRC_DIR := src
 LIB_DIR := lib
 BUILD_DIR := build
 
-# Check if we're in a Nix environment
-ifdef NIX_CC
-    # Use nix-env to find Eigen
-    EIGEN_PATH := $(shell nix-instantiate --eval -E 'with import <nixpkgs> {}; eigen.outPath' | tr -d '"')
-    ifdef EIGEN_PATH
-        CXXFLAGS += -I$(EIGEN_PATH)/include/eigen3
-    endif
+# Use EIGEN_PATH environment variable
+ifdef EIGEN_PATH
+    CXXFLAGS += -I$(EIGEN_PATH)
 else
-    # Check for user-defined Eigen path
-    ifdef EIGEN_PATH
-        CXXFLAGS += -I$(EIGEN_PATH)
-    else
-        # Check for Eigen in the project's lib directory
-        ifneq ($(wildcard $(LIB_DIR)/eigen/Eigen),)
-            CXXFLAGS += -I$(LIB_DIR)/eigen
-        endif
-    endif
+    $(error EIGEN_PATH is not set. Please run this Makefile within the nix environment or specify the variable manually.)
 endif
 
 SRCS := $(wildcard $(SRC_DIR)/*.cpp) $(wildcard $(LIB_DIR)/src/*.cpp)
 OBJS := $(patsubst %.cpp,$(BUILD_DIR)/%.o,$(notdir $(SRCS)))
 
-TARGET := $(BUILD_DIR)/bin
+TARGET := $(BUILD_DIR)/Machine_units
 
 .PHONY: all clean help run
 
@@ -42,9 +30,9 @@ $(BUILD_DIR)/%.o: $(SRC_DIR)/%.cpp
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
-$(BUILD_DIR)/%.o: $(LIB_DIR)/src/%.cpp
-	@mkdir -p $(@D)
-	$(CXX) $(CXXFLAGS) -I$(LIB_DIR)/include -c $< -o $@
+# $(BUILD_DIR)/%.o: $(LIB_DIR)/src/%.cpp
+# 	@mkdir -p $(@D)
+# 	$(CXX) $(CXXFLAGS) -I$(LIB_DIR)/include -c $< -o $@
 
 clean:
 	rm -rf $(BUILD_DIR)
