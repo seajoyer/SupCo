@@ -31,6 +31,7 @@ pkgs.mkShell {
     bear
 
     # misc
+    git-filter-repo
     git
 
     # Custom build and run scripts
