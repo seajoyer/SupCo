@@ -93,4 +93,4 @@ Install them to your system.
    #+begin_src shell
    py/main.py
    #+end_src shell
-   Make sure that the ~main.py~ file is executable (On Unix-like: ~chmod u+x main.py~).
+   Make sure that the ~main.py~ file is executable (on Unix-like: ~chmod u+x main.py~).
