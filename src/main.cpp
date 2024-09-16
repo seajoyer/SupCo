@@ -43,14 +43,14 @@ int main() {
     cout << endl;
 
     cout << "Double-precision (double):" << endl;
-    cout << "  Epsilon:  " << mcheps<double>(1.0f)   << endl;
-    cout << "  Dwarf:    " << mchdwarf<double>(1.0f) << endl;
-    cout << "  Giant:    " << mchgiant<double>(1.0f) << endl;
+    cout << "  Epsilon:  " << mcheps<double>(1.0)   << endl;
+    cout << "  Dwarf:    " << mchdwarf<double>(1.0) << endl;
+    cout << "  Giant:    " << mchgiant<double>(1.0) << endl;
 
     cout << endl;
 
     cout << "Half-precision (Eigen::half):" << endl;
-    cout << "  Epsilon:  " << mcheps<half>(half(1.0f))   << endl;
-    cout << "  Dwarf:    " << mchdwarf<half>(half(1.0f)) << endl;
-    cout << "  Giant:    " << mchgiant<half>(half(1.0f)) << endl;
+    cout << "  Epsilon:  " << mcheps<half>(half(1.0))   << endl;
+    cout << "  Dwarf:    " << mchdwarf<half>(half(1.0)) << endl;
+    cout << "  Giant:    " << mchgiant<half>(half(1.0)) << endl;
 }
