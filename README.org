@@ -18,7 +18,7 @@ For example, to run a C++ implementation of the [[#1-machine-units][Machine Unit
 nix run github:seajoyer/SupCo .#mch_uns-cpp
 #+end_src shell
 
-You can also use my development shell by executing:
+You're also able to use my development shell by executing:
 #+begin_src shell
 nix develop github:seajoyer/SupCo
 #+end_src shell
