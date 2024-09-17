@@ -1,12 +1,29 @@
-* Dmitry Sidyuk's numerical methods homeworks
+* Dmitry Sidyuk's MEPhI programming homeworks
 
-This file provides a brief descriptions of each homework. In case you use Nix, the template of each project if following:
+This file provides a brief descriptions of each homework.
+
+** Disclaimer
+
+I do not guarantee that all homework is done at least somewhat correctly, if you find an inaccuracy, please create a pull request🫶
+
+** Navigation
+- [[#for-nix-users][For Nix users]]
+- [[#numerical-methods][Numerical Methods]]
+  - [[#machine-units][Machine Units]]
+- [[#engineering-computing][Engineering Computing]]
+  - [[#coming-soon][Coming Soon...]]
+
+** For Nix users
+
+If you're a NixOS user or just a Nix package manager enjoyer, you're in luck. Each project comes with a flake that handles everything involved in the ~build~ and ~run~ steps."
+
+Just execute:
 
 #+begin_src shell
 nix <command> github:seajoyer/SupCo .#<label>
 #+end_src shell
 
-The ~<command>~ may be:
+Where the ~<command>~ is:
 
 - ~run~ to build & run a C++ program
 - ~build~ to just build a C++ program (works weird yet)
@@ -18,12 +35,16 @@ For example, to run a C++ implementation of the [[#1-machine-units][Machine Unit
 nix run github:seajoyer/SupCo .#mch_uns-cpp
 #+end_src shell
 
-You're also able to use my development shell by executing:
+There’s also a fully set up development shell with all the necessary dependencies:
 #+begin_src shell
 nix develop github:seajoyer/SupCo
 #+end_src shell
 
-** 1. [[Machine_units][Machine Units]]
+Keep in mind that Nix isn’t limited to NixOS -- you can install it on almost any system. Running the install script from https://nixos.org/download/ is a quick and easy way to get involved.
+
+** Numerical Methods
+
+*** 1. [[Machine_units][Machine Units]]
 
 Provides C++ and Python programs to determine machine epsilon, the maximum (giant), and minimum (dwarf) possible values of a floating-point number of different precisions.
 
@@ -31,4 +52,6 @@ Available labels:
 - ~mch_uns-cpp~ for a C++ program
 - ~mch_uns-py~ for a Python program
 
-** 2. [[https://www.youtube.com/watch?v=dQw4w9WgXcQ][Coming soon...]]
+** Engineering Computing
+
+*** 1. [[https://www.youtube.com/watch?v=dQw4w9WgXcQ][Coming soon...]]
