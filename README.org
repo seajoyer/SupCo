@@ -15,7 +15,7 @@ I do not guarantee that all homework is done at least somewhat correctly, if you
 
 ** For Nix users
 
-If you are using NixOS or at least the Nix package manager, you are in luck.. Each project comes with a flake that handles everything involved in the ~build~ and ~run~ steps."
+If you are using NixOS or at least the Nix package manager, you are in luck. Each project comes with a flake that handles everything involved in the ~build~ and ~run~ steps.
 
 Just execute:
 
