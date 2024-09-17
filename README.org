@@ -23,7 +23,7 @@ You can also use my development shell by executing:
 nix develop github:seajoyer/SupCo
 #+end_src shell
 
-** 1. [[Machine_units/README.org][Machine Units]]
+** 1. [[Machine_units][Machine Units]]
 
 Provides C++ and Python programs to determine machine epsilon, the maximum (giant), and minimum (dwarf) possible values of a floating-point number of different precisions.
 
