@@ -4,14 +4,14 @@ This file provides a brief descriptions of each homework.
 
 ** Disclaimer
 
-I do not guarantee that all homework is done at least somewhat correctly, if you find an inaccuracy, please create a pull request🫶
+I do not guarantee that all homework is done at least somewhat correctly, if you find an inaccuracy, please create a pull request 🫶
 
 ** Navigation
 - [[#for-nix-users][For Nix users]]
 - [[#numerical-methods][Numerical Methods]]
-  - [[#machine-units][Machine Units]]
+  - [[#1-machine-units][Machine Units]]
 - [[#engineering-computing][Engineering Computing]]
-  - [[#coming-soon][Coming Soon...]]
+  - [[#1-coming-soon][Coming Soon...]]
 
 ** For Nix users
 
