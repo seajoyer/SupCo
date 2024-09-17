@@ -13,17 +13,17 @@ The ~<command>~ may be:
 
 And the ~<label>~ stands for a certain program of each project (see sections below).
 
-For example, to run a C++ implementation of the [[#machine-units][Machine Units]] homework, you would do:
+For example, to run a C++ implementation of the [[#1-machine-units][Machine Units]] homework, you would do:
 #+begin_src shell
 nix run github:seajoyer/SupCo .#mch_uns-cpp
 #+end_src shell
 
-You can also enter my development shell by executing:
+You can also use my development shell by executing:
 #+begin_src shell
 nix develop github:seajoyer/SupCo
 #+end_src shell
 
-** 1. Machine Units
+** 1. [[Machine_units/README.org][Machine Units]]
 
 Provides C++ and Python programs to determine machine epsilon, the maximum (giant), and minimum (dwarf) possible values of a floating-point number of different precisions.
 
