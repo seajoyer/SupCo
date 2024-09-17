@@ -31,4 +31,4 @@ Available labels:
 - ~mch_uns-cpp~ for a C++ program
 - ~mch_uns-py~ for a Python program
 
-** 2. Coming soon...
+** 2. [[https://www.youtube.com/watch?v=dQw4w9WgXcQ][Coming soon...]]
