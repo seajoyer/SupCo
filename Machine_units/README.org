@@ -58,6 +58,8 @@ First, install dependencies, this is done differently in different systems:
 
    ~make clean~ to clean the ~build~ directory
 
+   ~make help~ to see a help message
+
 ** Running Python
 
 *** For Nix users
