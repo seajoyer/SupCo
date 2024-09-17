@@ -1,0 +1,34 @@
+* Dmitry Sidyuk's numerical methods homeworks
+
+This file provides a brief descriptions of each homework. In case you use Nix, the template of each project if following:
+
+#+begin_src shell
+nix <command> github:seajoyer/SupCo .#<label>
+#+end_src shell
+
+The ~<command>~ may be:
+
+- ~run~ to build & run a C++ program
+- ~build~ to just build a C++ program (works weird yet)
+
+And the ~<label>~ stands for a certain program of each project (see sections below).
+
+For example, to run a C++ implementation of the [[#1-machine-units][Machine Units]] homework, you would do:
+#+begin_src shell
+nix run github:seajoyer/SupCo .#mch_uns-cpp
+#+end_src shell
+
+You can also use my development shell by executing:
+#+begin_src shell
+nix develop github:seajoyer/SupCo
+#+end_src shell
+
+** 1. [[Machine_units][Machine Units]]
+
+Provides C++ and Python programs to determine machine epsilon, the maximum (giant), and minimum (dwarf) possible values of a floating-point number of different precisions.
+
+Available labels:
+- ~mch_uns-cpp~ for a C++ program
+- ~mch_uns-py~ for a Python program
+
+** 2. Coming soon...
