@@ -21,19 +21,10 @@
         };
 
         apps = {
-          machine_units-cpp = {
-            type = "app";
-            program = "${self.packages.${system}.machine_units-cpp}/bin/Machine_units";
-          };
-          machine_units-py = {
-            type = "app";
-            program = "${self.packages.${system}.machine_units-py}/bin/run-python";
-          };
-          argument_search = {
-            type = "app";
-            program = "${self.packages.${system}.argument_search}/bin/Argument_search";
-          };
-          default = self.apps.${system}.machine_units-cpp;
+          machine_units-cpp = machine-units.apps.${system}.machine_units-cpp;
+          machine_units-py = machine-units.apps.${system}.machine_units-py;
+          argument_search = argument-search.apps.${system}.argument_search;
+          default = machine-units.apps.${system}.default or machine-units.apps.${system}.machine_units-cpp;
         };
 
         devShells = {
