@@ -1,24 +1,19 @@
 {
   "nodes": {
-    "argument_search": {
+    "argument-search": {
       "inputs": {
         "flake-utils": "flake-utils",
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "dir": "Argument_search",
-        "lastModified": 1726675102,
-        "narHash": "sha256-4L/nZuErPKZfw6PI3hpoSywEKT4xmS8qRy+MZKhUWJo=",
-        "owner": "seajoyer",
-        "repo": "SupCo",
-        "rev": "fd79f028cfbe45405c309df0ce9c237bf9be0498",
-        "type": "github"
+        "lastModified": 1,
+        "narHash": "sha256-9BkRZo4jcQJiul+IB0/TYcU3ZUJ43F7hRKMeKYtcFqk=",
+        "path": "./Argument_search",
+        "type": "path"
       },
       "original": {
-        "dir": "Argument_search",
-        "owner": "seajoyer",
-        "repo": "SupCo",
-        "type": "github"
+        "path": "./Argument_search",
+        "type": "path"
       }
     },
     "flake-utils": {
@@ -75,25 +70,20 @@
         "type": "github"
       }
     },
-    "machine_units": {
+    "machine-units": {
       "inputs": {
         "flake-utils": "flake-utils_3",
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "dir": "Machine_units",
-        "lastModified": 1726675102,
-        "narHash": "sha256-4L/nZuErPKZfw6PI3hpoSywEKT4xmS8qRy+MZKhUWJo=",
-        "owner": "seajoyer",
-        "repo": "SupCo",
-        "rev": "fd79f028cfbe45405c309df0ce9c237bf9be0498",
-        "type": "github"
+        "lastModified": 1,
+        "narHash": "sha256-2FurIiNtF06ExYX9uV6zQ9XVhjIvQ5xLUsh6VauyDCk=",
+        "path": "./Machine_units",
+        "type": "path"
       },
       "original": {
-        "dir": "Machine_units",
-        "owner": "seajoyer",
-        "repo": "SupCo",
-        "type": "github"
+        "path": "./Machine_units",
+        "type": "path"
       }
     },
     "nixpkgs": {
@@ -146,9 +136,9 @@
     },
     "root": {
       "inputs": {
-        "argument_search": "argument_search",
+        "argument-search": "argument-search",
         "flake-utils": "flake-utils_2",
-        "machine_units": "machine_units",
+        "machine-units": "machine-units",
         "nixpkgs": "nixpkgs_3"
       }
     },
