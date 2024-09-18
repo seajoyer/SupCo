@@ -22,15 +22,15 @@
         packages = {
           # Expose packages for both projects
           argument_search = argument_search_outputs.packages.${system}.default;
-          machine_units_cpp = machine_units_outputs.packages.${system}.mch_uns-cpp;
-          machine_units_py = machine_units_outputs.packages.${system}.mch_uns-py;
+          machine_units-cpp = machine_units_outputs.packages.${system}.machine_units-cpp;
+          machine_units-py = machine_units_outputs.packages.${system}.machine_units-py;
         };
 
         apps = {
           # Expose apps for both projects
           argument_search = argument_search_outputs.apps.${system}.default;
-          machine_units_cpp = machine_units_outputs.apps.${system}.mch_uns-cpp;
-          machine_units_py = machine_units_outputs.apps.${system}.mch_uns-py;
+          machine_units-cpp = machine_units_outputs.apps.${system}.machine_units-cpp;
+          machine_units-py = machine_units_outputs.apps.${system}.machine_units-py;
         };
 
         devShells = {
