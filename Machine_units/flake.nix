@@ -1,5 +1,5 @@
 {
-  description = "C++ and Python Development Environment";
+  description = "Machine_units project";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
@@ -39,7 +39,7 @@
           #!${pythonEnv}/bin/python
           import sys
           sys.path.insert(0, "${./.}")
-          exec(open("py/main.py").read())
+          exec(open("Machine_units/py/main.py").read())
         '';
 
       in {
@@ -92,5 +92,6 @@
             echo "Happy coding!"
           '';
         };
-      });
+      }
+    );
 }

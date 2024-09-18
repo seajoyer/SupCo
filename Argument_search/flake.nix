@@ -1,5 +1,5 @@
 {
-  description = "C++ Development Environment";
+  description = "Argument_search project";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
@@ -42,12 +42,7 @@
         };
 
         devShells.default = pkgs.mkShell {
-          nativeBuildInputs = with pkgs; [
-            ccache
-            gnumake
-            git
-            git-filter-repo
-          ];
+          nativeBuildInputs = with pkgs; [ ccache gnumake git git-filter-repo ];
 
           buildInputs = with pkgs; [ clang libcxx ];
 
@@ -72,5 +67,6 @@
             echo "Happy coding!"
           '';
         };
-      });
+      }
+    );
 }

@@ -4,16 +4,8 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
     flake-utils.url = "github:numtide/flake-utils";
-    machine-units = {
-      url = "path:./Machine_units";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.flake-utils.follows = "flake-utils";
-    };
-    argument-search = {
-      url = "path:./Argument_search";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.flake-utils.follows = "flake-utils";
-    };
+    machine-units.url = "path:./Machine_units";
+    argument-search.url = "path:./Argument_search";
   };
 
   outputs = { self, nixpkgs, flake-utils, machine-units, argument-search }:
