@@ -1,4 +1,4 @@
-* Homework on function arguments
+* Homework on program arguments
 
 The project offers a C++ program that searches for the first occurrence of a specified number (both integers and floating-point) and specific strings within the command-line arguments. The search targets are provided via the command-line interface.
 
@@ -9,6 +9,8 @@ The project offers a C++ program that searches for the first occurrence of a spe
   - [[#manually][Manually]]
 
 ** Usage
+
+Run the program ~build/Argument_search~ and pass all the desired arguments ~-3 ez -.69 aboba 3.14 1.a 7 -.69 ez~
 
 #+begin_src shell
 $ build/Argument_search -3 ez -.69 aboba 3.14 1.a 7 -.69 ez
