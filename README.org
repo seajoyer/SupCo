@@ -11,7 +11,7 @@ I do not guarantee that all homework is done at least somewhat correctly, if you
 - [[#numerical-methods][Numerical Methods]]
   - [[#1-machine-units][Machine Units]]
 - [[#engineering-computing][Engineering Computing]]
-  - [[#1-coming-soon][Coming Soon...]]
+  - [[#1-argument-search][Argument Search]]
 
 ** For Nix users
 
@@ -52,6 +52,15 @@ Nix available program names:
 - ~machine_units-cpp~ a C++ program
 - ~machine_units-py~ a Python program
 
+*** 2. [[https://www.youtube.com/watch?v=dQw4w9WgXcQ][Coming soon...]]
+
 ** Engineering Computing
 
-*** 1. [[https://www.youtube.com/watch?v=dQw4w9WgXcQ][Coming soon...]]
+*** 1. [[Argument_search][Argument Search]]
+
+Offers a C++ program that searches for the first occurrence of a specified number (both integers and floating-point) and specific strings within the command-line arguments. The search targets are provided via the command-line interface.
+
+Nix available program names:
+- ~argument_search~
+
+*** 2. [[https://www.youtube.com/watch?v=dQw4w9WgXcQ][Coming soon...]]
