@@ -20,7 +20,7 @@ If you are using NixOS or at least the Nix package manager, you are in luck. Eac
 Just execute:
 
 #+begin_src shell
-nix <command> github:seajoyer/SupCo .#<program name>
+nix <command> github:seajoyer/SupCo#<program name>
 #+end_src shell
 
 Where the ~<command>~ is:
@@ -32,12 +32,12 @@ And the ~<program name>~ stands for a certain program of each project (see secti
 
 For example, to run a C++ implementation of the [[#1-machine-units][Machine Units]] homework, you would do:
 #+begin_src shell
-nix run github:seajoyer/SupCo .#machine_units-cpp
+nix run github:seajoyer/SupCo#machine_units-cpp
 #+end_src shell
 
 There are also a fully set up development shells with all the necessary dependencies:
 #+begin_src shell
-nix develop github:seajoyer/SupCo .#<program name>
+nix develop github:seajoyer/SupCo#<program name>
 #+end_src shell
 
 Keep in mind that Nix isn’t limited to NixOS -- you can install it on almost any system. Running the install script from https://nixos.org/download/ is a quick and easy way to get involved.

@@ -20,13 +20,13 @@ The project provides C++ and Python programs to determine machine epsilon, the m
 
 For happy Nix users, to build and run the project, it's enough to execute:
 #+begin_src shell
-nix run github:seajoyer/SupCo .#machine_units-cpp
+nix run github:seajoyer/SupCo#machine_units-cpp
 #+end_src shell
 Replace ~.#machine_units-cpp~ with ~.#machine_units-py~ to run the Python program.
 
 You can also start an isolated development shell with all the dependencies by simply running:
 #+begin_src shell
-nix develop github:seajoyer/SupCo .#machine_units
+nix develop github:seajoyer/SupCo#machine_units
 #+end_src shell
 
 *** Manually
@@ -39,7 +39,7 @@ First, install dependencies, this is done differently in different systems:
 - [[https://www.gnu.org/software/make/#download][Make]] build system
 - [[https://eigen.tuxfamily.org/][Eigen]] library
 
-**** Building
+**** Building & Running
 
 1. Clone the repository:
    #+begin_src shell
@@ -67,7 +67,7 @@ First, install dependencies, this is done differently in different systems:
 To run the python program, execute:
 
 #+begin_src shell
-nix run github:seajoyer/SupCo .#machine_units-py
+nix run github:seajoyer/SupCo#machine_units-py
 #+end_src shell
 
 To enter the isolated development shell with installed Python and NumPy:
