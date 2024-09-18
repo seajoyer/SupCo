@@ -1,25 +1,5 @@
 {
   "nodes": {
-    "argument-search": {
-      "inputs": {
-        "flake-utils": [
-          "flake-utils"
-        ],
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1,
-        "narHash": "sha256-yB96/3ZP69zAJbPXDE5EFFw4NAWoqxhhgEqfw66iiwI=",
-        "path": "./Argument_search",
-        "type": "path"
-      },
-      "original": {
-        "path": "./Argument_search",
-        "type": "path"
-      }
-    },
     "flake-utils": {
       "inputs": {
         "systems": "systems"
@@ -36,26 +16,6 @@
         "owner": "numtide",
         "repo": "flake-utils",
         "type": "github"
-      }
-    },
-    "machine-units": {
-      "inputs": {
-        "flake-utils": [
-          "flake-utils"
-        ],
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1,
-        "narHash": "sha256-J2madSXWgsez1KawDR/0zvaJcTVkGP+l1w1jd+0dUFQ=",
-        "path": "./Machine_units",
-        "type": "path"
-      },
-      "original": {
-        "path": "./Machine_units",
-        "type": "path"
       }
     },
     "nixpkgs": {
@@ -76,9 +36,7 @@
     },
     "root": {
       "inputs": {
-        "argument-search": "argument-search",
         "flake-utils": "flake-utils",
-        "machine-units": "machine-units",
         "nixpkgs": "nixpkgs"
       }
     },

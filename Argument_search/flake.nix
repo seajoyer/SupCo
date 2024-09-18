@@ -1,5 +1,5 @@
 {
-  description = "C++ and Python Development Environment";
+  description = "C++ Development Environment";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
@@ -13,14 +13,12 @@
 
         # Define the C++ project
         cppProject = pkgs.clangStdenv.mkDerivation {
-          name = "Machine_units";
+          name = "Argument_search";
           src = ./.;
 
           nativeBuildInputs = with pkgs; [ gnumake ];
 
-          buildInputs = with pkgs; [ eigen ];
-
-          EIGEN_PATH = "${pkgs.eigen}/include/eigen3";
+          buildInputs = with pkgs; [ ];
 
           buildPhase = ''
             make -j $($NIX_BUILD_CORES)
@@ -28,30 +26,18 @@
 
           installPhase = ''
             mkdir -p $out/bin
-            cp build/Machine_units $out/bin/
+            cp build/Argument_search $out/bin/
           '';
         };
 
-        # Define the Python project
-        pythonEnv = pkgs.python3.withPackages (ps: with ps; [ numpy ]);
-
-        pythonProject = pkgs.writeScriptBin "run-python" ''
-          #!${pythonEnv}/bin/python
-          import sys
-          sys.path.insert(0, "${./.}")
-          exec(open("Machine_units/py/main.py").read())
-        '';
-
       in {
         packages = {
-          machine_units-cpp = cppProject;
-          machine_units-py = pythonProject;
+          argument_search = cppProject;
           default = cppProject;
         };
 
         apps = {
-          machine_units-cpp = flake-utils.lib.mkApp { drv = cppProject; };
-          machine_units-py = flake-utils.lib.mkApp { drv = pythonProject; };
+          argument_search = flake-utils.lib.mkApp { drv = cppProject; };
           default = flake-utils.lib.mkApp { drv = cppProject; };
         };
 
@@ -61,33 +47,27 @@
             gnumake
             git
             git-filter-repo
-            pyright
           ];
 
-          buildInputs = with pkgs; [ clang libcxx eigen pythonEnv ];
-
-          EIGEN_PATH = "${pkgs.eigen}/include/eigen3";
+          buildInputs = with pkgs; [ clang libcxx ];
 
           shellHook = ''
             export CC=clang
             export CXX=clang++
-            export CXXFLAGS="-I${pkgs.eigen}/include/eigen3 ''${CXXFLAGS:-}"
+            export CXXFLAGS="''${CXXFLAGS:-}"
 
             export CCACHE_DIR=$HOME/.ccache
             export PATH="$HOME/.ccache/bin:$PATH"
 
             alias c=clear
 
-            echo "C++ and Python Development Environment"
+            echo "C++ Development Environment"
             echo "======================================"
             echo "$(clang --version | head -n 1)"
-            echo "$(python --version)"
-            echo "Eigen ${pkgs.eigen.version}"
             echo "$(make --version | head -n 1)"
             echo ""
-            echo "Build C++ project:  nix build .#machine_units-cpp"
-            echo "Run C++ project:    nix run   .#machine_units-cpp"
-            echo "Run Python project: nix run   .#machine_units-py"
+            echo "Build the project:  nix build .#argument_search"
+            echo "Run the project:    nix run   .#argument_search"
             echo ""
             echo "Happy coding!"
           '';

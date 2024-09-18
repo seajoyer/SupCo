@@ -1,6 +1,6 @@
 * Homework on floating point numbers
 
-The repo provides C++ and Python programs to determine machine epsilon, the maximum (giant), and minimum (dwarf) possible values of a floating-point number of different precisions:
+The project provides C++ and Python programs to determine machine epsilon, the maximum (giant), and minimum (dwarf) possible values of a floating-point number of different precisions:
 
 - half-precision (16-bit)
 - single-precision (32-bit)
@@ -20,13 +20,13 @@ The repo provides C++ and Python programs to determine machine epsilon, the maxi
 
 For happy Nix users, to build and run the project, it's enough to execute:
 #+begin_src shell
-nix run github:seajoyer/SupCo .#mch_uns-cpp
+nix run github:seajoyer/SupCo .#machine_units-cpp
 #+end_src shell
-Replace ~.#mch_uns-cpp~ with ~.#mch_uns-py~ to run the Python program.
+Replace ~.#machine_units-cpp~ with ~.#machine_units-py~ to run the Python program.
 
 You can also start an isolated development shell with all the dependencies by simply running:
 #+begin_src shell
-nix develop github:seajoyer/SupCo
+nix develop github:seajoyer/SupCo .#machine_units
 #+end_src shell
 
 *** Manually
@@ -67,7 +67,7 @@ First, install dependencies, this is done differently in different systems:
 To run the python program, execute:
 
 #+begin_src shell
-nix run github:seajoyer/SupCo .#mch_uns-py
+nix run github:seajoyer/SupCo .#machine_units-py
 #+end_src shell
 
 To enter the isolated development shell with installed Python and NumPy:

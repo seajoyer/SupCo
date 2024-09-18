@@ -20,7 +20,7 @@ If you are using NixOS or at least the Nix package manager, you are in luck. Eac
 Just execute:
 
 #+begin_src shell
-nix <command> github:seajoyer/SupCo .#<label>
+nix <command> github:seajoyer/SupCo .#<program name>
 #+end_src shell
 
 Where the ~<command>~ is:
@@ -28,16 +28,16 @@ Where the ~<command>~ is:
 - ~run~ to build & run a C++ program
 - ~build~ to just build a C++ program (works weird yet)
 
-And the ~<label>~ stands for a certain program of each project (see sections below).
+And the ~<program name>~ stands for a certain program of each project (see sections below).
 
 For example, to run a C++ implementation of the [[#1-machine-units][Machine Units]] homework, you would do:
 #+begin_src shell
-nix run github:seajoyer/SupCo .#mch_uns-cpp
+nix run github:seajoyer/SupCo .#machine_units-cpp
 #+end_src shell
 
-There’s also a fully set up development shell with all the necessary dependencies:
+There are also a fully set up development shells with all the necessary dependencies:
 #+begin_src shell
-nix develop github:seajoyer/SupCo
+nix develop github:seajoyer/SupCo .#<program name>
 #+end_src shell
 
 Keep in mind that Nix isn’t limited to NixOS -- you can install it on almost any system. Running the install script from https://nixos.org/download/ is a quick and easy way to get involved.
@@ -48,9 +48,9 @@ Keep in mind that Nix isn’t limited to NixOS -- you can install it on almost a
 
 Provides C++ and Python programs to determine machine epsilon, the maximum (giant), and minimum (dwarf) possible values of a floating-point number of different precisions.
 
-Available labels:
-- ~mch_uns-cpp~ for a C++ program
-- ~mch_uns-py~ for a Python program
+Nix available programs:
+- ~machine_units-cpp~ a C++ program
+- ~machine_units-py~ a Python program
 
 ** Engineering Computing
 
