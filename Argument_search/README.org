@@ -12,7 +12,7 @@ The project offers a C++ program that searches for the first occurrence of a spe
 
 *** With Nix
 
-For happy Nix users, to build and run the project, it's enough to execute:
+For lucky Nix users, to build and run the project, it's enough to execute:
 #+begin_src shell
 nix run github:seajoyer/SupCo#argument_search
 #+end_src shell

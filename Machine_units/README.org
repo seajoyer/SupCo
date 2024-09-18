@@ -18,7 +18,7 @@ The project provides C++ and Python programs to determine machine epsilon, the m
 
 *** For Nix users
 
-For happy Nix users, to build and run the project, it's enough to execute:
+For lucky Nix users, to build and run the project, it's enough to execute:
 #+begin_src shell
 nix run github:seajoyer/SupCo#machine_units-cpp
 #+end_src shell
