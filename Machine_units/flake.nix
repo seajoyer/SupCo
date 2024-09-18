@@ -39,7 +39,7 @@
           #!${pythonEnv}/bin/python
           import sys
           sys.path.insert(0, "${./.}")
-          exec(open("Machine_units/py/main.py").read())
+          exec(open("py/main.py").read())
         '';
 
       in {
