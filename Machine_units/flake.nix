@@ -1,86 +1,97 @@
-{ pkgs, system, nixpkgs, flake-utils }:
-flake-utils.lib.eachDefaultSystem (system:
-  let
-    # Define the C++ project
-    cppProject = pkgs.clangStdenv.mkDerivation {
-      name = "Machine_units";
-      src = ./.;
+{
+  description = "Machine_units project";
 
-      nativeBuildInputs = with pkgs; [ gnumake ];
+  inputs = {
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
+    flake-utils.url = "github:numtide/flake-utils";
+  };
 
-      buildInputs = with pkgs; [ eigen ];
+  outputs = { self, nixpkgs, flake-utils }:
+    flake-utils.lib.eachDefaultSystem (system:
+      let
+        pkgs = nixpkgs.legacyPackages.${system};
 
-      EIGEN_PATH = "${pkgs.eigen}/include/eigen3";
+        # Define the C++ project
+        cppProject = pkgs.clangStdenv.mkDerivation {
+          name = "Machine_units";
+          src = ./.;
 
-      buildPhase = ''
-        make -j $($NIX_BUILD_CORES)
-      '';
+          nativeBuildInputs = with pkgs; [ gnumake ];
 
-      installPhase = ''
-        mkdir -p $out/bin
-        cp build/Machine_units $out/bin/
-      '';
-    };
+          buildInputs = with pkgs; [ eigen ];
 
-    # Define the Python project
-    pythonEnv = pkgs.python3.withPackages (ps: with ps; [ numpy ]);
+          EIGEN_PATH = "${pkgs.eigen}/include/eigen3";
 
-    pythonProject = pkgs.writeScriptBin "run-python" ''
-      #!${pythonEnv}/bin/python
-      import sys
-      sys.path.insert(0, "${./.}")
-      exec(open("py/main.py").read())
-    '';
+          buildPhase = ''
+            make -j $($NIX_BUILD_CORES)
+          '';
 
-  in {
-    packages = {
-      machine_units-cpp = cppProject;
-      machine_units-py = pythonProject;
-      default = cppProject;
-    };
+          installPhase = ''
+            mkdir -p $out/bin
+            cp build/Machine_units $out/bin/
+          '';
+        };
 
-    apps = {
-      machine_units-cpp = flake-utils.lib.mkApp { drv = cppProject; };
-      machine_units-py = flake-utils.lib.mkApp { drv = pythonProject; };
-      default = flake-utils.lib.mkApp { drv = cppProject; };
-    };
+        # Define the Python project
+        pythonEnv = pkgs.python3.withPackages (ps: with ps; [ numpy ]);
 
-    devShells.default = pkgs.mkShell {
-      nativeBuildInputs = with pkgs; [
-        ccache
-        gnumake
-        git
-        git-filter-repo
-        pyright
-      ];
+        pythonProject = pkgs.writeScriptBin "run-python" ''
+          #!${pythonEnv}/bin/python
+          import sys
+          sys.path.insert(0, "${./.}")
+          exec(open("Machine_units/py/main.py").read())
+        '';
 
-      buildInputs = with pkgs; [ clang libcxx eigen pythonEnv ];
+      in {
+        packages = {
+          machine_units-cpp = cppProject;
+          machine_units-py = pythonProject;
+          default = cppProject;
+        };
 
-      EIGEN_PATH = "${pkgs.eigen}/include/eigen3";
+        apps = {
+          machine_units-cpp = flake-utils.lib.mkApp { drv = cppProject; };
+          machine_units-py = flake-utils.lib.mkApp { drv = pythonProject; };
+          default = flake-utils.lib.mkApp { drv = cppProject; };
+        };
 
-      shellHook = ''
-        export CC=clang
-        export CXX=clang++
-        export CXXFLAGS="-I${pkgs.eigen}/include/eigen3 ''${CXXFLAGS:-}"
+        devShells.default = pkgs.mkShell {
+          nativeBuildInputs = with pkgs; [
+            ccache
+            gnumake
+            git
+            git-filter-repo
+            pyright
+          ];
 
-        export CCACHE_DIR=$HOME/.ccache
-        export PATH="$HOME/.ccache/bin:$PATH"
+          buildInputs = with pkgs; [ clang libcxx eigen pythonEnv ];
 
-        alias c=clear
+          EIGEN_PATH = "${pkgs.eigen}/include/eigen3";
 
-        echo "C++ and Python Development Environment"
-        echo "======================================"
-        echo "$(clang --version | head -n 1)"
-        echo "$(python --version)"
-        echo "Eigen ${pkgs.eigen.version}"
-        echo "$(make --version | head -n 1)"
-        echo ""
-        echo "Build C++ project:  nix build .#machine_units-cpp"
-        echo "Run C++ project:    nix run   .#machine_units-cpp"
-        echo "Run Python project: nix run   .#machine_units-py"
-        echo ""
-        echo "Happy coding!"
-      '';
-    };
-  }
-)
+          shellHook = ''
+            export CC=clang
+            export CXX=clang++
+            export CXXFLAGS="-I${pkgs.eigen}/include/eigen3 ''${CXXFLAGS:-}"
+
+            export CCACHE_DIR=$HOME/.ccache
+            export PATH="$HOME/.ccache/bin:$PATH"
+
+            alias c=clear
+
+            echo "C++ and Python Development Environment"
+            echo "======================================"
+            echo "$(clang --version | head -n 1)"
+            echo "$(python --version)"
+            echo "Eigen ${pkgs.eigen.version}"
+            echo "$(make --version | head -n 1)"
+            echo ""
+            echo "Build C++ project:  nix build .#machine_units-cpp"
+            echo "Run C++ project:    nix run   .#machine_units-cpp"
+            echo "Run Python project: nix run   .#machine_units-py"
+            echo ""
+            echo "Happy coding!"
+          '';
+        };
+      }
+    );
+}

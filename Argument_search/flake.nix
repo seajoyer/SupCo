@@ -1,61 +1,72 @@
-{ pkgs, system, nixpkgs, flake-utils }:
-flake-utils.lib.eachDefaultSystem (system:
-  let
-    # Define the C++ project
-    cppProject = pkgs.clangStdenv.mkDerivation {
-      name = "Argument_search";
-      src = ./.;
+{
+  description = "Argument_search project";
 
-      nativeBuildInputs = with pkgs; [ gnumake ];
+  inputs = {
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
+    flake-utils.url = "github:numtide/flake-utils";
+  };
 
-      buildInputs = with pkgs; [ ];
+  outputs = { self, nixpkgs, flake-utils }:
+    flake-utils.lib.eachDefaultSystem (system:
+      let
+        pkgs = nixpkgs.legacyPackages.${system};
 
-      buildPhase = ''
-        make -j $($NIX_BUILD_CORES)
-      '';
+        # Define the C++ project
+        cppProject = pkgs.clangStdenv.mkDerivation {
+          name = "Argument_search";
+          src = ./.;
 
-      installPhase = ''
-        mkdir -p $out/bin
-        cp build/Argument_search $out/bin/
-      '';
-    };
+          nativeBuildInputs = with pkgs; [ gnumake ];
 
-  in {
-    packages = {
-      argument_search = cppProject;
-      default = cppProject;
-    };
+          buildInputs = with pkgs; [ ];
 
-    apps = {
-      argument_search = flake-utils.lib.mkApp { drv = cppProject; };
-      default = flake-utils.lib.mkApp { drv = cppProject; };
-    };
+          buildPhase = ''
+            make -j $($NIX_BUILD_CORES)
+          '';
 
-    devShells.default = pkgs.mkShell {
-      nativeBuildInputs = with pkgs; [ ccache gnumake git git-filter-repo ];
+          installPhase = ''
+            mkdir -p $out/bin
+            cp build/Argument_search $out/bin/
+          '';
+        };
 
-      buildInputs = with pkgs; [ clang libcxx ];
+      in {
+        packages = {
+          argument_search = cppProject;
+          default = cppProject;
+        };
 
-      shellHook = ''
-        export CC=clang
-        export CXX=clang++
-        export CXXFLAGS="''${CXXFLAGS:-}"
+        apps = {
+          argument_search = flake-utils.lib.mkApp { drv = cppProject; };
+          default = flake-utils.lib.mkApp { drv = cppProject; };
+        };
 
-        export CCACHE_DIR=$HOME/.ccache
-        export PATH="$HOME/.ccache/bin:$PATH"
+        devShells.default = pkgs.mkShell {
+          nativeBuildInputs = with pkgs; [ ccache gnumake git git-filter-repo ];
 
-        alias c=clear
+          buildInputs = with pkgs; [ clang libcxx ];
 
-        echo "C++ Development Environment"
-        echo "======================================"
-        echo "$(clang --version | head -n 1)"
-        echo "$(make --version | head -n 1)"
-        echo ""
-        echo "Build the project:  nix build .#argument_search"
-        echo "Run the project:    nix run   .#argument_search"
-        echo ""
-        echo "Happy coding!"
-      '';
-    };
-  }
-)
+          shellHook = ''
+            export CC=clang
+            export CXX=clang++
+            export CXXFLAGS="''${CXXFLAGS:-}"
+
+            export CCACHE_DIR=$HOME/.ccache
+            export PATH="$HOME/.ccache/bin:$PATH"
+
+            alias c=clear
+
+            echo "C++ Development Environment"
+            echo "======================================"
+            echo "$(clang --version | head -n 1)"
+            echo "$(make --version | head -n 1)"
+            echo ""
+            echo "Build the project:  nix build .#argument_search"
+            echo "Run the project:    nix run   .#argument_search"
+            echo ""
+            echo "Happy coding!"
+          '';
+        };
+      }
+    );
+}
