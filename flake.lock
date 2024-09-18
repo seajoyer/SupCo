@@ -20,11 +20,11 @@
       "flake": false,
       "locked": {
         "dir": "Argument_search",
-        "lastModified": 1726690258,
-        "narHash": "sha256-9yCzqhZQEQte4YrlWVYEHnb0ynAAZJfr9B4WN8PDSzQ=",
+        "lastModified": 1726691018,
+        "narHash": "sha256-Onhiz+PHL57Wwn2HyZ70VRkhqJY9hhVBN05grVcKimw=",
         "owner": "seajoyer",
         "repo": "SupCo",
-        "rev": "f38e4f9776940bd347ea82c7a08b090c0c8abc78",
+        "rev": "46ab1357962d825db8b6dcf860dd34130afc6886",
         "type": "github"
       },
       "original": {
@@ -108,11 +108,11 @@
       "flake": false,
       "locked": {
         "dir": "Machine_units",
-        "lastModified": 1726690258,
-        "narHash": "sha256-9yCzqhZQEQte4YrlWVYEHnb0ynAAZJfr9B4WN8PDSzQ=",
+        "lastModified": 1726691018,
+        "narHash": "sha256-Onhiz+PHL57Wwn2HyZ70VRkhqJY9hhVBN05grVcKimw=",
         "owner": "seajoyer",
         "repo": "SupCo",
-        "rev": "f38e4f9776940bd347ea82c7a08b090c0c8abc78",
+        "rev": "46ab1357962d825db8b6dcf860dd34130afc6886",
         "type": "github"
       },
       "original": {
