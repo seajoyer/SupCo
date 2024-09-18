@@ -3,8 +3,9 @@
 The project offers a C++ program that searches for the first occurrence of a specified number (both integers and floating-point) and specific strings within the command-line arguments. The search targets are provided via the command-line interface.
 
 ** Navigation
-- [[#building-c][Building C++]]
-  - [[#for-nix-users][For Nix users]]
+- [[#usage][Usage]]
+- [[#building][Building]]
+  - [[#with-nix][With Nix]]
   - [[#manually][Manually]]
 
 ** Usage
