@@ -8,26 +8,6 @@ The project offers a C++ program that searches for the first occurrence of a spe
   - [[#with-nix][With Nix]]
   - [[#manually][Manually]]
 
-** Usage
-
-Run the program ~build/Argument_search~ and pass all the desired arguments ~-3 ez -.69 aboba 3.14 1.a 7 -.69 ez~
-
-#+begin_src shell
-$ build/Argument_search -3 ez -.69 aboba 3.14 1.a 7 -.69 ez
-
-Integral number: 1a
-  wrong candidate, try again: 3.14
-  wrong candidate, try again: -3
-  position: 1
-
-Floating point number: 1.a
-  wrong candidate, try again: -.69
-  position: 3
-
-String: ez
-  position: 2
-#+end_src
-
 ** Building
 
 *** With Nix
@@ -68,3 +48,22 @@ First, install dependencies, this is done differently in different systems:
 
    ~make help~ to see a help message
 
+** Usage
+
+Run the program ~build/Argument_search~ and pass all the desired arguments ~-3 ez -.69 aboba 3.14 1.a 7 -.69 ez~
+
+#+begin_src shell
+$ build/Argument_search -3 ez -.69 aboba 3.14 1.a 7 -.69 ez
+
+Integral number: 1a
+  wrong candidate, try again: 3.14
+  wrong candidate, try again: -3
+  position: 1
+
+Floating point number: 1.a
+  wrong candidate, try again: -.69
+  position: 3
+
+String: ez
+  position: 2
+#+end_src
