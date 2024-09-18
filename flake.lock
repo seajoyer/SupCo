@@ -1,6 +1,6 @@
 {
   "nodes": {
-    "argument-search": {
+    "argument-search-local": {
       "inputs": {
         "flake-utils": "flake-utils",
         "nixpkgs": "nixpkgs"
@@ -14,6 +14,24 @@
       "original": {
         "path": "./Argument_search",
         "type": "path"
+      }
+    },
+    "argument-search-remote": {
+      "flake": false,
+      "locked": {
+        "dir": "Argument_search",
+        "lastModified": 1726690258,
+        "narHash": "sha256-9yCzqhZQEQte4YrlWVYEHnb0ynAAZJfr9B4WN8PDSzQ=",
+        "owner": "seajoyer",
+        "repo": "SupCo",
+        "rev": "f38e4f9776940bd347ea82c7a08b090c0c8abc78",
+        "type": "github"
+      },
+      "original": {
+        "dir": "Argument_search",
+        "owner": "seajoyer",
+        "repo": "SupCo",
+        "type": "github"
       }
     },
     "flake-utils": {
@@ -70,7 +88,7 @@
         "type": "github"
       }
     },
-    "machine-units": {
+    "machine-units-local": {
       "inputs": {
         "flake-utils": "flake-utils_3",
         "nixpkgs": "nixpkgs_2"
@@ -84,6 +102,24 @@
       "original": {
         "path": "./Machine_units",
         "type": "path"
+      }
+    },
+    "machine-units-remote": {
+      "flake": false,
+      "locked": {
+        "dir": "Machine_units",
+        "lastModified": 1726690258,
+        "narHash": "sha256-9yCzqhZQEQte4YrlWVYEHnb0ynAAZJfr9B4WN8PDSzQ=",
+        "owner": "seajoyer",
+        "repo": "SupCo",
+        "rev": "f38e4f9776940bd347ea82c7a08b090c0c8abc78",
+        "type": "github"
+      },
+      "original": {
+        "dir": "Machine_units",
+        "owner": "seajoyer",
+        "repo": "SupCo",
+        "type": "github"
       }
     },
     "nixpkgs": {
@@ -136,9 +172,17 @@
     },
     "root": {
       "inputs": {
-        "argument-search": "argument-search",
+        "argument-search": [
+          "argument-search-local"
+        ],
+        "argument-search-local": "argument-search-local",
+        "argument-search-remote": "argument-search-remote",
         "flake-utils": "flake-utils_2",
-        "machine-units": "machine-units",
+        "machine-units": [
+          "machine-units-local"
+        ],
+        "machine-units-local": "machine-units-local",
+        "machine-units-remote": "machine-units-remote",
         "nixpkgs": "nixpkgs_3"
       }
     },
