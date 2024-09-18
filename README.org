@@ -48,7 +48,7 @@ Keep in mind that Nix isn’t limited to NixOS -- you can install it on almost a
 
 Provides C++ and Python programs to determine machine epsilon, the maximum (giant), and minimum (dwarf) possible values of a floating-point number of different precisions.
 
-Nix available programs:
+Nix available program names:
 - ~machine_units-cpp~ a C++ program
 - ~machine_units-py~ a Python program
 
