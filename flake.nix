@@ -1,5 +1,5 @@
 {
-  description = "Wrapper flake for Machine_units and Argument_search projects";
+  description = "Wrapper flake for home work projects";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
