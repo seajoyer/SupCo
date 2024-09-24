@@ -1,6 +1,6 @@
 * Homework on 2D vector structure
 
-The project implements the 2-dimensional vector as a structure with some overloaded operators and handly methods:
+The project implements the 2-dimensional vector as a structure with some overloaded operators and handy methods:
 - ~+~ vector summation
 - ~-~ vector subtraction
 - ~*~ scalar product
