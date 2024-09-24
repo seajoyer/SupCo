@@ -65,7 +65,7 @@ Nix available program names:
 
 *** 2. [[Vector_structure][Vector structure]]
 
-The project implements the 2-dimensional vector as a structure with some overloaded operators and handy methods.
+The project implements a 2-dimensional vector as a structure with several overloaded operators and convenient methods.
 
 Nix available program names:
 - ~vector_structure~
