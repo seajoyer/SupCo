@@ -25,8 +25,8 @@ nix <command> github:seajoyer/SupCo#<program name> --impure
 
 Where the ~<command>~ is:
 
-- ~run~ to build & run a C++ program
-- ~build~ to just build a C++ program (works weird yet)
+- ~run~ to build & run a project
+- ~build~ to just build a project
 
 And the ~<program name>~ stands for a certain program of each project (see sections below).
 
