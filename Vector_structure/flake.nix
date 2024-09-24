@@ -11,7 +11,6 @@
       let
         pkgs = nixpkgs.legacyPackages.${system};
 
-        # Define the C++ project
         cppProject = pkgs.clangStdenv.mkDerivation {
           name = "vector_structure";
           src = ./.;
