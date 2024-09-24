@@ -35,7 +35,7 @@ nix develop github:seajoyer/SupCo#machine_units --impure
 
 First, install dependencies, this is done differently in different systems:
 
-- [[https://clang.llvm.org/get_started.html][Clang]] compiler
+- [[https://gcc.gnu.org/][g++]] compiler
 - [[https://www.gnu.org/software/make/#download][Make]] build system
 - [[https://eigen.tuxfamily.org/][Eigen]] library
 
