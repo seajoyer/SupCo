@@ -1,13 +1,13 @@
 * Homework on 2D vector structure
 
-The project implements the 2-dimensional vector as a structure with some overloaded operators and usefull methods:
+The project implements the 2-dimensional vector as a structure with some overloaded operators and handly methods:
 - ~+~ vector summation
 - ~-~ vector subtraction
 - ~*~ scalar product
 - ~*~ the product of a vector by a scalar
 - ~/~ dividing a vector by a scalar
 - the unary operator ~-~
-- two shorthand operators: ~+=~, ~-\=~
+- two shorthand operators: ~+=~, ~-=~
 - comparison operators: ~==~, ~!=~
 - calculating the ~length()~ of a vector
 - normalization of the vector ~normalize()~

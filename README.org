@@ -63,4 +63,11 @@ Offers a C++ program that searches for the first occurrence of a specified numbe
 Nix available program names:
 - ~argument_search~
 
-*** 2. [[https://www.youtube.com/watch?v=dQw4w9WgXcQ][Coming soon...]]
+*** 2. [[Vector_structure][Vector structure]]
+
+The project implements the 2-dimensional vector as a structure with some overloaded operators and handly methods.
+
+Nix available program names:
+- ~vector_structure~
+
+*** 3. [[https://www.youtube.com/watch?v=dQw4w9WgXcQ][Coming soon...]]
