@@ -39,7 +39,7 @@ There are also a fully set up development shells with all the necessary dependen
 #+begin_src shell
 nix develop github:seajoyer/SupCo#<program name>
 #+end_src shell
-Use the ~--impure~ flag to make the shell isolated from your local repos.
+Use the ~--impure~ flag to isolate the shell from your local repositories.
 
 Keep in mind that Nix isn’t limited to NixOS -- you can install it on almost any system. Running the install script from https://nixos.org/download/ is a quick and easy way to get involved.
 
