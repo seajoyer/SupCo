@@ -26,7 +26,7 @@ Replace ~.#machine_units-cpp~ with ~.#machine_units-py~ to run the Python progra
 
 You can also start an isolated development shell with all the dependencies by simply running:
 #+begin_src shell
-nix develop github:seajoyer/SupCo#machine_units --impure
+nix develop github:seajoyer/SupCo#machine_units
 #+end_src shell
 
 *** Manually

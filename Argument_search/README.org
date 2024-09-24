@@ -19,7 +19,7 @@ nix run github:seajoyer/SupCo#argument_search -- <arg1 arg2 ...> --impure
 
 You can also start an isolated development shell with all the dependencies by simply running:
 #+begin_src shell
-nix develop github:seajoyer/SupCo#argument_search --impure
+nix develop github:seajoyer/SupCo#argument_search
 #+end_src shell
 
 *** Manually

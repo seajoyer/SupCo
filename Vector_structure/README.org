@@ -28,7 +28,7 @@ nix run github:seajoyer/SupCo#vector_structure --impure
 
 You also can start an isolated development shell with all the dependencies by simply running:
 #+begin_src shell
-nix develop github:seajoyer/SupCo#vector_structure --impure
+nix develop github:seajoyer/SupCo#vector_structure
 #+end_src shell
 
 *** Manually
