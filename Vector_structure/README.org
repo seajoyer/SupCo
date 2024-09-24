@@ -23,12 +23,12 @@ The project implements the 2-dimensional vector as a structure with some overloa
 
 This project comes with a flake, for those lucky Nix users to build and run the project it's enough to execute:
 #+begin_src shell
-nix run github:seajoyer/SupCo#argument_search --impure
+nix run github:seajoyer/SupCo#vector_structure --impure
 #+end_src shell
 
 You also can start an isolated development shell with all the dependencies by simply running:
 #+begin_src shell
-nix develop github:seajoyer/SupCo#argument_search --impure
+nix develop github:seajoyer/SupCo#vector_structure --impure
 #+end_src shell
 
 *** Manually
