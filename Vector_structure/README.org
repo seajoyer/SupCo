@@ -1,4 +1,4 @@
-* Homework on program arguments
+* Homework on 2D vector structure
 
 The project implements the 2-dimensional vector as a structure with some overloaded operators and usefull methods:
 - ~+~ vector summation
