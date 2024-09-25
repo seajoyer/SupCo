@@ -12,11 +12,6 @@ The project implements a 2-dimensional vector as a structure with several overlo
 - calculating the ~length()~ of a vector
 - normalization of the vector ~normalize()~
 
-** Navigation
-- [[#building][Building]]
-  - [[#with-nix][With Nix]]
-  - [[#manually][Manually]]
-
 ** Building
 
 *** With Nix
