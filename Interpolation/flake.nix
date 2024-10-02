@@ -56,7 +56,7 @@
           sys.path.insert(0, os.path.join(os.getcwd(), "Interpolation", "py"))
 
           import demo
-          demo.main()  # Replace with the actual function you want to call
+          demo.main()
         '';
 
       in {
