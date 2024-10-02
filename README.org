@@ -54,7 +54,15 @@ Nix available program names:
 - ~machine_units-cpp~ a C++ program
 - ~machine_units-py~ a Python program
 
-*** 2. [[https://www.youtube.com/watch?v=dQw4w9WgXcQ][Coming soon...]]
+*** 2. [[Interpolation][Interpolation]]
+
+The project offers C++ and Python implementations of Lagrange interpolation, packaged as shared libraries. It also includes plotting modules for visualizing the results. You can choose to distribute the interpolation nodes either evenly (equidistantly) or using Chebyshev nodes for improved accuracy.
+
+Nix available programs:
+- ~interpolation-cpp~ for C++ froject
+- ~interpolation-py~ for Python project
+
+*** 3. [[https://www.youtube.com/watch?v=dQw4w9WgXcQ][Coming soon...]]
 
 ** Engineering Computing
 
