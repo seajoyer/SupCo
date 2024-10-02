@@ -5,12 +5,11 @@ CXXFLAGS := -std=c++20 -Wall -Wextra -O2
 SRC_DIR := src
 INC_DIR := include
 BUILD_DIR := build
-PLOT_DIR := plots
 
 SRCS := $(wildcard $(SRC_DIR)/*.cpp) main.cpp
 OBJS := $(patsubst %.cpp,$(BUILD_DIR)/%.o,$(notdir $(SRCS)))
 
-TARGET := $(BUILD_DIR)/interpolation
+TARGET := $(BUILD_DIR)/dynamic_matrix
 
 .PHONY: all clean help run
 
@@ -28,25 +27,17 @@ $(BUILD_DIR)/main.o: main.cpp | $(BUILD_DIR)
 $(BUILD_DIR):
 	mkdir -p $(BUILD_DIR)
 
-$(PLOT_DIR):
-	mkdir -p $(PLOT_DIR)
-	mkdir -p $(PLOT_DIR)/data
-	mkdir -p $(PLOT_DIR)/images
-
 clean:
 	rm -rf $(BUILD_DIR)
 
-run: $(TARGET) | $(PLOT_DIR)
-	@echo "Generating plots..."
-	@$(TARGET)
-	@gnuplot $(PLOT_DIR)/data/*.gp
-	@echo "Plots generated."
+run: $(TARGET)
+	@$(TARGET) ${ARGS}
 
 help:
 	@echo "Usage:"
 	@echo "  make         # Build the project"
-	@echo "  make run     # Build and run the project, generate plots as PNG files in $(PLOT_DIR)/images"
-	@echo "  make clean   # Remove build artifacts, plots, and temporary files"
+	@echo "  make run     # Build and run the project"
+	@echo "  make clean   # Remove build artifacts and temporary files"
 	@echo "  make help    # Show this help message"
 	@echo ""
 	@echo "Current settings:"
