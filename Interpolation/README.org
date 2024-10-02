@@ -9,7 +9,7 @@ An example for a function by 5 nodes:
 #+begin_export html
 <div style="display: flex; justify-content: space-around;">
   <div>
-    <img src="plots/images/Chebyshev\ Nodes\ Interpolation.png" alt="Image 1" width="400"/>
+    <img src="plots/images/Chebyshev Nodes Interpolation.png" alt="Image 1" width="400"/>
   </div>
   <div>
     <img src="plots/images/Uniform\ Nodes\ Interpolation.png" alt="Image 2" width="400"/>
