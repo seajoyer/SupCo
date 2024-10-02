@@ -51,7 +51,7 @@
           #!${pythonEnv}/bin/python
           import sys
           sys.path.insert(0, "${./py}")
-          exec(open("py/demo.py").read())
+          exec(open("demo.py").read())
         '';
 
       in {
