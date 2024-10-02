@@ -32,7 +32,6 @@
           '';
         };
 
-        # Define the Python project
         pythonEnv = pkgs.python3.withPackages (ps: with ps; [ numpy ]);
 
         pythonProject = pkgs.writeScriptBin "run-python" ''

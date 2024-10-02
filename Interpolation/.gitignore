@@ -1,0 +1,10 @@
+cpp/build
+cpp/plots
+cpp/.cache
+cpp/compile_commands.json
+cpp/result
+py/result
+py/lagrange/__pycache__
+result
+plots
+.direnv

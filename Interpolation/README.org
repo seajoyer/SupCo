@@ -1,0 +1,53 @@
+* Homework on 2D vector structure
+
+The project implements a 2-dimensional vector as a structure with several overloaded operators and convenient methods, including:
+- ~+~ vector summation
+- ~-~ vector subtraction
+- ~*~ scalar product
+- ~*~ the product of a vector by a scalar
+- ~/~ dividing a vector by a scalar
+- the unary operator ~-~
+- two shorthand operators: ~+=~, ~-=~
+- comparison operators: ~==~, ~!=~
+- calculating the ~length()~ of a vector
+- normalization of the vector ~normalize()~
+
+** Building
+
+*** With Nix
+
+This project comes with a flake, for those lucky Nix users to build and run the project it's enough to execute:
+#+begin_src shell
+nix run github:seajoyer/SupCo#vector_structure --impure
+#+end_src shell
+
+You also can start an isolated development shell with all the dependencies by simply running:
+#+begin_src shell
+nix develop github:seajoyer/SupCo#vector_structure
+#+end_src shell
+
+*** Manually
+
+**** Prerequisites
+
+First, install dependencies, this is done differently in different systems:
+
+- [[https://gcc.gnu.org/][g++]] compiler
+- [[https://www.gnu.org/software/make/#download][Make]] build system
+
+**** Building & Running
+
+1. Clone the repository:
+   #+begin_src shell
+   git clone https://github.com/seajoyer/SupCo
+   cd SupCo/Vector_structure
+   #+end_src shell
+2. And once you are ready:
+
+   ~make~ to build
+
+   ~make run~ to build & run
+
+   ~make clean~ to clean the ~build~ directory
+
+   ~make help~ to see a help message
