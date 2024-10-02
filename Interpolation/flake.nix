@@ -50,8 +50,13 @@
         pythonProject = pkgs.writeScriptBin "run-python" ''
           #!${pythonEnv}/bin/python
           import sys
-          sys.path.insert(0, "${./.}")
-          exec(open("Interpolation/py/demo.py").read())
+          import os
+
+          sys.path.insert(0, os.path.join(os.getcwd(), "Interpolation", "py", "lagrange"))
+          sys.path.insert(0, os.path.join(os.getcwd(), "Interpolation", "py"))
+
+          import demo
+          demo.main()  # Replace with the actual function you want to call
         '';
 
       in {
