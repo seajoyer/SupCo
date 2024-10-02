@@ -50,8 +50,8 @@
         pythonProject = pkgs.writeScriptBin "run-python" ''
           #!${pythonEnv}/bin/python
           import sys
-          sys.path.insert(0, "${./py}")
-          exec(open("demo.py").read())
+          sys.path.insert(0, "${./.}")
+          exec(open("Interpolation/py/demo.py").read())
         '';
 
       in {
