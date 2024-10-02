@@ -10,6 +10,7 @@ I do not guarantee that all homework is done at least somewhat correctly, if you
 - [[#for-nix-users][For Nix users]]
 - [[#numerical-methods][Numerical Methods]]
   - [[#1-machine-units][Machine Units]]
+  - [[#2-interpolation][Interpolation]]
 - [[#engineering-computing][Engineering Computing]]
   - [[#1-argument-search][Argument Search]]
   - [[#2-vector-structure][Vector structure]]
