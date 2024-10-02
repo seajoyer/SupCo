@@ -1,5 +1,3 @@
 build
-result
-.cache
 .direnv
-compile_commands.json
+.cache

@@ -1,18 +1,22 @@
-#include "vector_structure.h"
+#include "vector3d_structure.h"
+
 #include <iostream>
 #include <cmath>
 
 using namespace std;
 
-Vector3D::Vector3D(double _x, double _y, double _z) : x(_x), y(_y), z(_z) {}
+double x, y, z;
+
+Vector3D::Vector3D(double _x, double _y, double _z): x(_x), y(_y), z(_z) {}
 
 double Vector3D::dot(const Vector3D& other) const {
 	return x*other.x+y*other.y+z*other.z;
 }
 
 Vector3D Vector3D::cross(const Vector3D& other) const {
-  return Vector3D(y * other.z - z * other.y, z * other.x - x * other.z,
-				  x * other.y - y * other.x);
+	return Vector3D(y*other.z-z*other.y,
+			z*other.x-x*other.z,
+			x*other.y-y*other.x);
 }
 
 Vector3D Vector3D::operator*(double scalar) const {

@@ -31,7 +31,7 @@ clean:
 	rm -rf $(BUILD_DIR)
 
 run: $(TARGET)
-	@$(TARGET) ${ARGS}
+	@$(TARGET)
 
 help:
 	@echo "Usage:"

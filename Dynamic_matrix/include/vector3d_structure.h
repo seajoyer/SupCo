@@ -17,4 +17,4 @@ struct Vector3D {
 	 double lenght() const;
 	 Vector3D normalize() const;
 	 friend std::ostream& operator<<(std::ostream& os, const Vector3D& vec);
- };
+};

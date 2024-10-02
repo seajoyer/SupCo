@@ -11,16 +11,19 @@
       let
         pkgs = nixpkgs.legacyPackages.${system};
 
-        cppProject = pkgs.clangStdenv.mkDerivation {
-          name = "dynamic_matrix";
+        cppProject = pkgs.stdenv.mkDerivation {
+          pname = "dynamic_matrix";
+          version = "0.1.0";
+          name = "dynamic_matrix-0.1.0";
+
           src = ./.;
 
-          nativeBuildInputs = with pkgs; [ gnumake libcc ];
+          nativeBuildInputs = with pkgs; [ gnumake ];
 
-          buildInputs = with pkgs; [ ];
+          buildInputs = with pkgs; [ libcxx ];
 
           buildPhase = ''
-            make -j $($NIX_BUILD_CORES)
+            make -j $NIX_BUILD_CORES
           '';
 
           installPhase = ''
@@ -41,13 +44,15 @@
         };
 
         devShells.default = pkgs.mkShell {
-          nativeBuildInputs = with pkgs; [ ccache gnumake git git-filter-repo bear ];
+          name = "dynamic_matrix-dev-shell";
 
-          buildInputs = with pkgs; [ clang libcxx ];
+          nativeBuildInputs = with pkgs; [ gnumake ccache git bear ];
+
+          buildInputs = with pkgs; [ libcxx ];
 
           shellHook = ''
-            export CC=clang
-            export CXX=clang++
+            export CC=gcc
+            export CXX=g++
             export CXXFLAGS="''${CXXFLAGS:-}"
 
             export CCACHE_DIR=$HOME/.ccache
@@ -55,10 +60,9 @@
 
             alias c=clear
 
-            echo "C++ Development Environment"
             echo "======================================"
-            echo "$(clang --version | head -n 1)"
-            echo "$(make --version | head -n 1)"
+            echo "$(gcc    --version | head -n 1)"
+            echo "$(make   --version | head -n 1)"
             echo ""
             echo "Build the project:  nix build .#dynamic_matrix"
             echo "Run the project:    nix run   .#dynamic_matrix"
@@ -66,6 +70,5 @@
             echo "Happy coding!"
           '';
         };
-      }
-    );
+      });
 }
