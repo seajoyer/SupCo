@@ -29,7 +29,7 @@ void plotResults(const std::vector<double>& x_nodes, const std::vector<double>& 
     dataFile.close();
 
     std::ofstream scriptFile(PLOTS_DIR + "data/" + title + ".gp");
-    scriptFile << "set terminal x11 size 1200,900\n"
+    scriptFile << "set terminal png size 1200,900\n"
                << "set output '" + PLOTS_DIR + "images/" + title + ".png'\n"
                << "set xlabel 'x'\n"
                << "set ylabel 'y'\n"
@@ -46,7 +46,8 @@ void plotResults(const std::vector<double>& x_nodes, const std::vector<double>& 
         << "'' index 1 with points lc 'magenta' ps 3 title 'Interpolation values', "
         << "'' index 2 with lines lw 3 lc 'black' title 'Original function', "
         << "'' index 3 with lines lw 3 lc 'magenta' title 'Lagrange "
-           "Interpolation'\n";
+           "Interpolation'\n"
+        << "set output\n";
     scriptFile.close();
 
     std::cout << "Data and script files created." << std::endl;
