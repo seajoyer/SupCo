@@ -95,7 +95,7 @@
           shellHook = ''
             export CC=gcc
             export CXX=g++
-            export CXXFLAGS="''${CXXFLAGS:-}
+            export CXXFLAGS="''${CXXFLAGS:-}"
 
             export CCACHE_DIR=$HOME/.ccache
             export PATH="$HOME/.ccache/bin:$PATH"
