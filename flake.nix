@@ -22,7 +22,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, flake-utils, machine-units, argument-search, vector-structure }:
+  outputs = { self, nixpkgs, flake-utils, machine-units, argument-search, vector-structure, interpolation }:
     flake-utils.lib.eachDefaultSystem (system:
       let
         pkgs = nixpkgs.legacyPackages.${system};

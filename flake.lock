@@ -9,11 +9,11 @@
       },
       "locked": {
         "dir": "Argument_search",
-        "lastModified": 1727217437,
-        "narHash": "sha256-+xrwG9VSsBN6iWc9dx7sM00niXmYzAXj2spez0IHy6M=",
+        "lastModified": 1727865130,
+        "narHash": "sha256-5jn5kzgarE3uv0JsSev/ukdZz7b3V7/gdQV9vg2u11E=",
         "owner": "seajoyer",
         "repo": "SupCo",
-        "rev": "08f020e577e410e0b4c445c747856929e7019900",
+        "rev": "60088a5c999046199c969a8d56c05edcdc851c7a",
         "type": "github"
       },
       "original": {
@@ -95,7 +95,25 @@
         "type": "github"
       }
     },
-    "machine-units": {
+    "flake-utils_5": {
+      "inputs": {
+        "systems": "systems_5"
+      },
+      "locked": {
+        "lastModified": 1726560853,
+        "narHash": "sha256-X6rJYSESBVr3hBoH0WbKE5KvhPU5bloyZ2L4K60/fPQ=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "c1dfcf08411b08f6b8615f7d8971a2bfa81d5e8a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "interpolation": {
       "inputs": {
         "flake-utils": "flake-utils_3",
         "nixpkgs": [
@@ -103,12 +121,35 @@
         ]
       },
       "locked": {
-        "dir": "Machine_units",
-        "lastModified": 1727217437,
-        "narHash": "sha256-+xrwG9VSsBN6iWc9dx7sM00niXmYzAXj2spez0IHy6M=",
+        "dir": "Interpolation",
+        "lastModified": 1727865130,
+        "narHash": "sha256-5jn5kzgarE3uv0JsSev/ukdZz7b3V7/gdQV9vg2u11E=",
         "owner": "seajoyer",
         "repo": "SupCo",
-        "rev": "08f020e577e410e0b4c445c747856929e7019900",
+        "rev": "60088a5c999046199c969a8d56c05edcdc851c7a",
+        "type": "github"
+      },
+      "original": {
+        "dir": "Interpolation",
+        "owner": "seajoyer",
+        "repo": "SupCo",
+        "type": "github"
+      }
+    },
+    "machine-units": {
+      "inputs": {
+        "flake-utils": "flake-utils_4",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "dir": "Machine_units",
+        "lastModified": 1727865130,
+        "narHash": "sha256-5jn5kzgarE3uv0JsSev/ukdZz7b3V7/gdQV9vg2u11E=",
+        "owner": "seajoyer",
+        "repo": "SupCo",
+        "rev": "60088a5c999046199c969a8d56c05edcdc851c7a",
         "type": "github"
       },
       "original": {
@@ -120,11 +161,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1726969270,
-        "narHash": "sha256-8fnFlXBgM/uSvBlLWjZ0Z0sOdRBesyNdH0+esxqizGc=",
+        "lastModified": 1727672256,
+        "narHash": "sha256-9/79hjQc9+xyH+QxeMcRsA6hDyw6Z9Eo1/oxjvwirLk=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "23cbb250f3bf4f516a2d0bf03c51a30900848075",
+        "rev": "1719f27dd95fd4206afb9cec9f415b539978827e",
         "type": "github"
       },
       "original": {
@@ -138,6 +179,7 @@
       "inputs": {
         "argument-search": "argument-search",
         "flake-utils": "flake-utils_2",
+        "interpolation": "interpolation",
         "machine-units": "machine-units",
         "nixpkgs": "nixpkgs",
         "vector-structure": "vector-structure"
@@ -203,20 +245,35 @@
         "type": "github"
       }
     },
+    "systems_5": {
+      "locked": {
+        "lastModified": 1681028828,
+        "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
+        "owner": "nix-systems",
+        "repo": "default",
+        "rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-systems",
+        "repo": "default",
+        "type": "github"
+      }
+    },
     "vector-structure": {
       "inputs": {
-        "flake-utils": "flake-utils_4",
+        "flake-utils": "flake-utils_5",
         "nixpkgs": [
           "nixpkgs"
         ]
       },
       "locked": {
         "dir": "Vector_structure",
-        "lastModified": 1727217437,
-        "narHash": "sha256-+xrwG9VSsBN6iWc9dx7sM00niXmYzAXj2spez0IHy6M=",
+        "lastModified": 1727865130,
+        "narHash": "sha256-5jn5kzgarE3uv0JsSev/ukdZz7b3V7/gdQV9vg2u11E=",
         "owner": "seajoyer",
         "repo": "SupCo",
-        "rev": "08f020e577e410e0b4c445c747856929e7019900",
+        "rev": "60088a5c999046199c969a8d56c05edcdc851c7a",
         "type": "github"
       },
       "original": {

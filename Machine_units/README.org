@@ -22,7 +22,7 @@ For lucky Nix users, to build and run the project, it's enough to execute:
 #+begin_src shell
 nix run github:seajoyer/SupCo#machine_units-cpp --impure
 #+end_src shell
-Replace ~.#machine_units-cpp~ with ~.#machine_units-py~ to run the Python program.
+Replace ~#machine_units-cpp~ with ~#machine_units-py~ to run the Python program.
 
 You can also start an isolated development shell with all the dependencies by simply running:
 #+begin_src shell
@@ -72,7 +72,7 @@ nix run github:seajoyer/SupCo#machine_units-py --impure
 
 To enter the isolated development shell with installed Python and NumPy:
 #+begin_src shell
-nix develop github:seajoyer/SupCo --impure
+nix develop github:seajoyer/SupCo#machine_units --impure
 #+end_src shell
 
 *** Manually
@@ -93,6 +93,5 @@ Install them to your system.
    #+end_src shell
 2. Then just execute:
    #+begin_src shell
-   py/main.py
+   python3 py/main.py
    #+end_src shell
-   Make sure that the ~main.py~ file is executable (on Unix-like: ~chmod u+x py/main.py~).
