@@ -2,6 +2,21 @@
 
 The project offers C++ and Python implementations of Lagrange interpolation, packaged as shared libraries. It also includes plotting modules for visualizing the results. You can choose to distribute the interpolation nodes either evenly (equidistantly) or using Chebyshev nodes for improved accuracy.
 
+An example for a function by 5 nodes:
+
+\[f(x) = \cos\left(\frac{e^{\frac{x}{3}}}{10}\right),\quad x \in [0, 10]\]
+
+#+begin_export html
+<div style="display: flex; justify-content: space-around;">
+  <div>
+    <img src="plots/images/Chebyshev\ Nodes\ Interpolation.png" alt="Image 1" width="400"/>
+  </div>
+  <div>
+    <img src="plots/images/Uniform\ Nodes\ Interpolation.png" alt="Image 2" width="400"/>
+  </div>
+</div>
+#+end_export
+
 ** Navigation
 - [[#building-c][Building C++]]
   - [[#for-nix-users][For Nix users]]

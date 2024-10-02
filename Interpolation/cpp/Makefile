@@ -34,7 +34,7 @@ $(PLOT_DIR):
 	mkdir -p $(PLOT_DIR)/images
 
 clean:
-	rm -rf $(BUILD_DIR) $(PLOT_DIR)
+	rm -rf $(BUILD_DIR)
 
 run: $(TARGET) | $(PLOT_DIR)
 	@echo "Generating plots..."

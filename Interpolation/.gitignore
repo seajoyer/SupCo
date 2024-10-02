@@ -1,5 +1,4 @@
 cpp/build
-cpp/plots
 cpp/.cache
 cpp/compile_commands.json
 cpp/result
