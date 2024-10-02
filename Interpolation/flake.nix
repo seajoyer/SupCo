@@ -39,10 +39,10 @@
           pkgs.writeScriptBin "run-interpolation-project-with-plots" ''
             #!${pkgs.bash}/bin/bash
             set -e
-            mkdir -p plots/data
-            mkdir -p plots/images
+            mkdir -p ${cppProject}/plots/data
+            mkdir -p ${cppProject}/plots/images
             ${cppProject}/bin/interpolation
-            for file in plots/data/*.gp; do
+            for file in ${cppProject}/plots/data/*.gp; do
               ${pkgs.gnuplot}/bin/gnuplot -p "$file" -e "set terminal x11; replot; set output;"
             done
           '';
