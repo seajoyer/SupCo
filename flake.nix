@@ -20,9 +20,13 @@
       url = "github:seajoyer/SupCo?dir=Interpolation";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    dynamic_matrix = {
+      url = "github:seajoyer/SupCo?dir=Dynamic_matrix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, flake-utils, machine-units, argument-search, vector-structure, interpolation }:
+  outputs = { self, nixpkgs, flake-utils, machine-units, argument-search, vector-structure, interpolation, dynamic_matrix }:
     flake-utils.lib.eachDefaultSystem (system:
       let
         pkgs = nixpkgs.legacyPackages.${system};
@@ -34,6 +38,7 @@
           vector_structure = vector-structure.packages.${system}.vector_structure;
           interpolation-cpp = interpolation.packages.${system}.interpolation-cpp;
           interpolation-py  = interpolation.packages.${system}.interpolation-py;
+          dynamic_matrix = dynamic_matrix.packages.${system}.dynamic_matrix;
           default = machine-units.packages.${system}.default;
         };
 
@@ -44,6 +49,7 @@
           vector_structure = vector-structure.apps.${system}.vector_structure;
           interpolation-cpp = interpolation.apps.${system}.interpolation-cpp;
           interpolation-py  = interpolation.apps.${system}.interpolation-py;
+          dynamic_matrix = dynamic_matrix.apps.${system}.dynamic_matrix;
           default = machine-units.apps.${system}.default or machine-units.apps.${system}.machine_units-cpp;
         };
 
@@ -52,6 +58,7 @@
           argument_search = argument-search.devShells.${system}.default;
           vector_structure = vector-structure.devShells.${system}.default;
           interpolation = interpolation.devShells.${system}.default;
+          dynamic_matrix = dynamic_matrix.devShells.${system}.default;
           default = machine-units.devShells.${system}.default;
         };
       }

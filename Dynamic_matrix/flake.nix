@@ -11,10 +11,10 @@
       let
         pkgs = nixpkgs.legacyPackages.${system};
 
-        cppProject = pkgs.stdenv.mkDerivation {
-          pname = "dynamic_matrix";
+        testDynamicMatrics = pkgs.stdenv.mkDerivation {
+          pname = "run_tests";
           version = "0.1.0";
-          name = "dynamic_matrix-0.1.0";
+          name = "dynamic_matrix_tests-0.1.0";
 
           src = ./.;
 
@@ -23,24 +23,24 @@
           buildInputs = with pkgs; [ libcxx catch2 ];
 
           buildPhase = ''
-            make -j $NIX_BUILD_CORES
+            make build/run_tests -j $NIX_BUILD_CORES
           '';
 
           installPhase = ''
             mkdir -p $out/bin
-            cp build/dynamic_matrix $out/bin/
+            cp build/run_tests $out/bin/
           '';
         };
 
       in {
         packages = {
-          dynamic_matrix = cppProject;
-          default = cppProject;
+          dynamic_matrix = testDynamicMatrics;
+          default = testDynamicMatrics;
         };
 
         apps = {
-          dynamic_matrix = flake-utils.lib.mkApp { drv = cppProject; };
-          default = flake-utils.lib.mkApp { drv = cppProject; };
+          dynamic_matrix = flake-utils.lib.mkApp { drv = testDynamicMatrics; };
+          default = flake-utils.lib.mkApp { drv = testDynamicMatrics; };
         };
 
         devShells.default = pkgs.mkShell {
@@ -65,8 +65,9 @@
             echo "$(gcc    --version | head -n 1)"
             echo "$(make   --version | head -n 1)"
             echo ""
-            echo "Build the project:  nix build .#dynamic_matrix"
-            echo "Run the project:    nix run   .#dynamic_matrix"
+            echo "Build the project:  nix build"
+            echo "Run the project:    nix run"
+            echo "Run the tests:      nix flake check"
             echo ""
             echo "Happy coding!"
           '';
