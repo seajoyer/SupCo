@@ -9,11 +9,11 @@
       },
       "locked": {
         "dir": "Argument_search",
-        "lastModified": 1728032905,
-        "narHash": "sha256-qfYkEK2KnfBPSxwoISqvtK1RHKY8nXDxKvnAXVrCxSI=",
+        "lastModified": 1728033009,
+        "narHash": "sha256-fTouUFzfiAAynguFNUTn/iymxqxEk4bdMo46pSh2F7E=",
         "owner": "seajoyer",
         "repo": "SupCo",
-        "rev": "10c45b45d4084faa623702ff2fe90eaf6b90b80f",
+        "rev": "4db6c7bddb1e868fc6e82830666a8db67c69d2ef",
         "type": "github"
       },
       "original": {
@@ -32,11 +32,11 @@
       },
       "locked": {
         "dir": "Dynamic_matrix",
-        "lastModified": 1728032905,
-        "narHash": "sha256-qfYkEK2KnfBPSxwoISqvtK1RHKY8nXDxKvnAXVrCxSI=",
+        "lastModified": 1728033009,
+        "narHash": "sha256-fTouUFzfiAAynguFNUTn/iymxqxEk4bdMo46pSh2F7E=",
         "owner": "seajoyer",
         "repo": "SupCo",
-        "rev": "10c45b45d4084faa623702ff2fe90eaf6b90b80f",
+        "rev": "4db6c7bddb1e868fc6e82830666a8db67c69d2ef",
         "type": "github"
       },
       "original": {
@@ -163,11 +163,11 @@
       },
       "locked": {
         "dir": "Interpolation",
-        "lastModified": 1728032905,
-        "narHash": "sha256-qfYkEK2KnfBPSxwoISqvtK1RHKY8nXDxKvnAXVrCxSI=",
+        "lastModified": 1728033009,
+        "narHash": "sha256-fTouUFzfiAAynguFNUTn/iymxqxEk4bdMo46pSh2F7E=",
         "owner": "seajoyer",
         "repo": "SupCo",
-        "rev": "10c45b45d4084faa623702ff2fe90eaf6b90b80f",
+        "rev": "4db6c7bddb1e868fc6e82830666a8db67c69d2ef",
         "type": "github"
       },
       "original": {
@@ -186,11 +186,11 @@
       },
       "locked": {
         "dir": "Machine_units",
-        "lastModified": 1728032905,
-        "narHash": "sha256-qfYkEK2KnfBPSxwoISqvtK1RHKY8nXDxKvnAXVrCxSI=",
+        "lastModified": 1728033009,
+        "narHash": "sha256-fTouUFzfiAAynguFNUTn/iymxqxEk4bdMo46pSh2F7E=",
         "owner": "seajoyer",
         "repo": "SupCo",
-        "rev": "10c45b45d4084faa623702ff2fe90eaf6b90b80f",
+        "rev": "4db6c7bddb1e868fc6e82830666a8db67c69d2ef",
         "type": "github"
       },
       "original": {
@@ -326,11 +326,11 @@
       },
       "locked": {
         "dir": "Vector_structure",
-        "lastModified": 1728032905,
-        "narHash": "sha256-qfYkEK2KnfBPSxwoISqvtK1RHKY8nXDxKvnAXVrCxSI=",
+        "lastModified": 1728033009,
+        "narHash": "sha256-fTouUFzfiAAynguFNUTn/iymxqxEk4bdMo46pSh2F7E=",
         "owner": "seajoyer",
         "repo": "SupCo",
-        "rev": "10c45b45d4084faa623702ff2fe90eaf6b90b80f",
+        "rev": "4db6c7bddb1e868fc6e82830666a8db67c69d2ef",
         "type": "github"
       },
       "original": {
