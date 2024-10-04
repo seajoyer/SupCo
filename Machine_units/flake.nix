@@ -37,8 +37,8 @@
         pythonProject = pkgs.writeScriptBin "run-python" ''
           #!${pythonEnv}/bin/python
           import sys
-          sys.path.insert(0, "${./Machine_units}")
-          exec(open("py/main.py").read())
+          sys.path.insert(0, "${./.}")
+          exec(open("Machine_units/py/main.py").read())
         '';
 
       in {
