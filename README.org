@@ -47,7 +47,7 @@ Keep in mind that Nix isn’t limited to NixOS -- you can install it on almost a
 
 ** Numerical Methods
 
-*** 1. [[Machine_units][Machine Units]]
+*** 1. [[https://github.com/seajoyer/Machine_units][Machine Units]]
 
 Provides C++ and Python programs to determine machine epsilon, the maximum (giant), and minimum (dwarf) possible values of a floating-point number of different precisions.
 
@@ -55,7 +55,7 @@ Nix available program names:
 - ~machine_units-cpp~ a C++ program
 - ~machine_units-py~ a Python program
 
-*** 2. [[Interpolation][Interpolation]]
+*** 2. [[https://github.com/seajoyer/Interpolation][Interpolation]]
 
 The project offers C++ and Python implementations of Lagrange interpolation, packaged as shared libraries. It also includes plotting modules for visualizing the results. You can choose to distribute the interpolation nodes either evenly (equidistantly) or using Chebyshev nodes for improved accuracy.
 
@@ -67,14 +67,14 @@ Nix available programs:
 
 ** Engineering Computing
 
-*** 1. [[Argument_search][Argument Search]]
+*** 1. [[https://github.com/seajoyer/Argument_search][Argument Search]]
 
 Offers a C++ program that searches for the first occurrence of a specified number (both integers and floating-point) and specific strings within the command-line arguments. The search targets are provided via the command-line interface.
 
 Nix available program names:
 - ~argument_search~
 
-*** 2. [[Vector_structure][Vector structure]]
+*** 2. [[https://github.com/seajoyer/Vector_structure][Vector structure]]
 
 The project implements a 2-dimensional vector as a structure with several overloaded operators and convenient methods.
 
