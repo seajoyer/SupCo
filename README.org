@@ -14,7 +14,7 @@ I do not guarantee that all homework is done at least somewhat correctly, if you
 - [[#engineering-computing][Engineering Computing]]
   - [[#1-argument-search][Argument Search]]
   - [[#2-vector-structure][Vector Structure]]
-  - [[#2-dynamic-matrix][Dynamic Matrix]]
+  - [[#3-dynamic-matrix][Dynamic Matrix]]
 
 ** For Nix users
 
