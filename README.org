@@ -32,7 +32,7 @@ Provides C++ and Python programs to determine machine epsilon, the maximum (gian
 
 The project offers C++ and Python implementations of Lagrange interpolation, packaged as shared libraries. It also includes plotting modules for visualizing the results. You can choose to distribute the interpolation nodes either evenly (equidistantly) or using Chebyshev nodes for improved accuracy.
 
-*** 3. [[https://github.com/seajoyer/Dynamic_matrix][Dynamic_matrix]]
+*** 3. [[https://github.com/seajoyer/Dynamic_matrix][Dynamic Matrix]]
 
 This project implements a dynamic matrix structure in C++ with support for 3D vector operations. It provides a flexible and efficient way to work with matrices of varying sizes, along with comprehensive unit tests to ensure reliability.
 
