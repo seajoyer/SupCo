@@ -13,35 +13,12 @@ I do not guarantee that all homework is done at least somewhat correctly, if you
   - [[#2-interpolation][Interpolation]]
 - [[#engineering-computing][Engineering Computing]]
   - [[#1-argument-search][Argument Search]]
-  - [[#2-vector-structure][Vector structure]]
+  - [[#2-vector-structure][Vector Structure]]
+  - [[#2-dynamic-matrix][Dynamic Matrix]]
 
 ** For Nix users
 
-If you are using NixOS or at least the Nix package manager, you are in luck. Each project comes with a flake that handles everything involved in the ~build~ and ~run~ steps.
-
-Just execute:
-
-#+begin_src shell
-nix <command> github:seajoyer/SupCo#<program name> --impure
-#+end_src shell
-
-Where the ~<command>~ is:
-
-- ~run~ to build & run a project
-- ~build~ to just build a project
-
-And the ~<program name>~ stands for a certain program of each project (see sections below).
-
-For example, to run a C++ implementation of the [[#1-machine-units][Machine Units]] homework, you would do:
-#+begin_src shell
-nix run github:seajoyer/SupCo#machine_units-cpp --impure
-#+end_src shell
-
-There are also a fully set up development shells with all the necessary dependencies:
-#+begin_src shell
-nix develop github:seajoyer/SupCo#<program name>
-#+end_src shell
-Use the ~--impure~ flag to isolate the shell from your local repositories.
+If you are using NixOS or at least the Nix package manager, you are in luck. Each project comes with a flake that handles everything involved in the ~build~ and ~run~ steps. There are also a fully set up development shells with all the necessary dependencies for each project.
 
 Keep in mind that Nix isn’t limited to NixOS -- you can install it on almost any system. Running the install script from https://nixos.org/download/ is a quick and easy way to get involved.
 
@@ -51,19 +28,15 @@ Keep in mind that Nix isn’t limited to NixOS -- you can install it on almost a
 
 Provides C++ and Python programs to determine machine epsilon, the maximum (giant), and minimum (dwarf) possible values of a floating-point number of different precisions.
 
-Nix available program names:
-- ~machine_units-cpp~ a C++ program
-- ~machine_units-py~ a Python program
-
 *** 2. [[https://github.com/seajoyer/Interpolation][Interpolation]]
 
 The project offers C++ and Python implementations of Lagrange interpolation, packaged as shared libraries. It also includes plotting modules for visualizing the results. You can choose to distribute the interpolation nodes either evenly (equidistantly) or using Chebyshev nodes for improved accuracy.
 
-Nix available programs:
-- ~interpolation-cpp~ for C++ froject
-- ~interpolation-py~ for Python project
+*** 3. [[https://github.com/seajoyer/Dynamic_matrix][Dynamic_matrix]]
 
-*** 3. [[https://www.youtube.com/watch?v=dQw4w9WgXcQ][Coming soon...]]
+This project implements a dynamic matrix structure in C++ with support for 3D vector operations. It provides a flexible and efficient way to work with matrices of varying sizes, along with comprehensive unit tests to ensure reliability.
+
+*** 4. [[https://www.youtube.com/watch?v=dQw4w9WgXcQ][Coming soon...]]
 
 ** Engineering Computing
 
@@ -71,14 +44,8 @@ Nix available programs:
 
 Offers a C++ program that searches for the first occurrence of a specified number (both integers and floating-point) and specific strings within the command-line arguments. The search targets are provided via the command-line interface.
 
-Nix available program names:
-- ~argument_search~
-
 *** 2. [[https://github.com/seajoyer/Vector_structure][Vector structure]]
 
 The project implements a 2-dimensional vector as a structure with several overloaded operators and convenient methods.
-
-Nix available program names:
-- ~vector_structure~
 
 *** 3. [[https://www.youtube.com/watch?v=dQw4w9WgXcQ][Coming soon...]]
