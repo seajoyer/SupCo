@@ -1,3 +1,15 @@
 [submodule "Argument_search"]
 	path = Argument_search
 	url = https://github.com/seajoyer/Argument_search
+[submodule "Vector_structure"]
+	path = Vector_structure
+	url = https://github.com/seajoyer/Vector_structure
+[submodule "Machine_units"]
+	path = Machine_units
+	url = https://github.com/seajoyer/Machine_units
+[submodule "Interpolation"]
+	path = Interpolation
+	url = https://github.com/seajoyer/Interpolation
+[submodule "Dynamic_matrix"]
+	path = Dynamic_matrix
+	url = https://github.com/seajoyer/Dynamic_matrix
