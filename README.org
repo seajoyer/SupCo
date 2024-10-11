@@ -4,7 +4,7 @@ This file provides a brief descriptions of each homework.
 
 ** Disclaimer
 
-I do not guarantee that all homework is done at least somewhat correctly, if you find an inaccuracy, please create a pull request 🫶
+I do not guarantee that any homework is done at least somewhat correctly, if you find an inaccuracy, please create a pull request 🫶
 
 ** Navigation
 - [[#for-nix-users][For Nix users]]
@@ -32,11 +32,7 @@ Provides C++ and Python programs to determine machine epsilon, the maximum (gian
 
 The project offers C++ and Python implementations of Lagrange interpolation, packaged as shared libraries. It also includes plotting modules for visualizing the results. You can choose to distribute the interpolation nodes either evenly (equidistantly) or using Chebyshev nodes for improved accuracy.
 
-*** 3. [[https://github.com/seajoyer/Dynamic_matrix][Dynamic Matrix]]
-
-This project implements a dynamic matrix structure in C++ with support for 3D vector operations. It provides a flexible and efficient way to work with matrices of varying sizes, along with comprehensive unit tests to ensure reliability.
-
-*** 4. [[https://www.youtube.com/watch?v=dQw4w9WgXcQ][Coming soon...]]
+*** 3. [[https://www.youtube.com/watch?v=dQw4w9WgXcQ][Coming soon...]]
 
 ** Engineering Computing
 
@@ -48,4 +44,8 @@ Offers a C++ program that searches for the first occurrence of a specified numbe
 
 The project implements a 2-dimensional vector as a structure with several overloaded operators and convenient methods.
 
-*** 3. [[https://www.youtube.com/watch?v=dQw4w9WgXcQ][Coming soon...]]
+*** 3. [[https://github.com/seajoyer/Dynamic_matrix][Dynamic Matrix]]
+
+This project implements a dynamic matrix structure in C++ with support for 3D vector operations. It provides a flexible and efficient way to work with matrices of varying sizes, along with comprehensive unit tests to ensure reliability.
+
+*** 4. [[https://www.youtube.com/watch?v=dQw4w9WgXcQ][Coming soon...]]
