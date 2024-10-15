@@ -13,3 +13,6 @@
 [submodule "Dynamic_matrix"]
 	path = Dynamic_matrix
 	url = https://github.com/seajoyer/Dynamic_matrix
+[submodule "Numerical_Derivatives"]
+	path = Numerical_Derivatives
+	url = https://github.com/seajoyer/Numerical_Derivatives
