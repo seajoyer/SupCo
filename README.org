@@ -11,6 +11,7 @@ I do not guarantee that any homework is done at least somewhat correctly, if you
 - [[#numerical-methods][Numerical Methods]]
   - [[#1-machine-units][Machine Units]]
   - [[#2-interpolation][Interpolation]]
+  - [[#3-numerical-derivatives][Numerical Derivatives]]
 - [[#engineering-computing][Engineering Computing]]
   - [[#1-argument-search][Argument Search]]
   - [[#2-vector-structure][Vector Structure]]
@@ -32,7 +33,9 @@ Provides C++ and Python programs to determine machine epsilon, the maximum (gian
 
 The project offers C++ and Python implementations of Lagrange interpolation, packaged as shared libraries. It also includes plotting modules for visualizing the results. You can choose to distribute the interpolation nodes either evenly (equidistantly) or using Chebyshev nodes for improved accuracy.
 
-*** 3. [[https://www.youtube.com/watch?v=dQw4w9WgXcQ][Coming soon...]]
+*** 3. [[https://github.com/seajoyer/Numerical_Derivatives][Numerical Derivatives]]
+
+This project implements numerical derivatives in C++ and Python, providing left, center, right, and asymmetric derivatives with varying precision.
 
 ** Engineering Computing
 
@@ -47,5 +50,3 @@ The project implements a 2-dimensional vector as a structure with several overlo
 *** 3. [[https://github.com/seajoyer/Dynamic_matrix][Dynamic Matrix]]
 
 This project implements a dynamic matrix structure in C++ with support for 3D vector operations. It provides a flexible and efficient way to work with matrices of varying sizes, along with comprehensive unit tests to ensure reliability.
-
-*** 4. [[https://www.youtube.com/watch?v=dQw4w9WgXcQ][Coming soon...]]
