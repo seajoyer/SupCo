@@ -36,7 +36,7 @@ The project offers C++ and Python implementations of Lagrange interpolation, pac
 
 *** 3. [[https://github.com/seajoyer/Numerical_Derivatives][Numerical Derivatives]]
 
-This project implements numerical derivatives in C++ and Python, providing left, center, right, and asymmetric derivatives with varying precision.
+This project allows to calculate numerical derivatives in Python and C++, providing left, center, right, and asymmetric derivatives with varying precision.
 
 ** Engineering Computing
 
