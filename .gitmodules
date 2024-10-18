@@ -16,3 +16,6 @@
 [submodule "Numerical_Derivatives"]
 	path = Numerical_Derivatives
 	url = https://github.com/seajoyer/Numerical_Derivatives
+[submodule "Doubly_Linked_List"]
+	path = Doubly_Linked_List
+	url = https://github.com/seajoyer/Doubly_Linked_List
