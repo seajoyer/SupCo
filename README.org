@@ -50,3 +50,7 @@ The project implements a 2-dimensional vector as a structure with several overlo
 *** 3. [[https://github.com/seajoyer/Dynamic_matrix][Dynamic Matrix]]
 
 This project implements a dynamic matrix structure in C++ with support for 3D vector operations. It provides a flexible and efficient way to work with matrices of varying sizes, along with comprehensive unit tests to ensure reliability.
+
+*** 4. [[https://github.com/seajoyer/Doubly_Linked_List][Doubly Linked List]]
+
+This project implements a doubly linked list data structure in C++, providing a flexible and efficient way to work with linked lists, along with comprehensive unit tests.
