@@ -16,6 +16,7 @@ I do not guarantee that any homework is done at least somewhat correctly, if you
   - [[#1-argument-search][Argument Search]]
   - [[#2-vector-structure][Vector Structure]]
   - [[#3-dynamic-matrix][Dynamic Matrix]]
+  - [[#4-doubly-linked-list][Doubly Linked List]]
 
 ** For Nix users
 
