@@ -46,12 +46,12 @@ Offers a C++ program that searches for the first occurrence of a specified numbe
 
 *** 2. [[https://github.com/seajoyer/Vector_structure][Vector structure]]
 
-The project implements a 2-dimensional vector as a structure with several overloaded operators and convenient methods.
+Implements a 2-dimensional vector as a structure with several overloaded operators and convenient methods.
 
 *** 3. [[https://github.com/seajoyer/Dynamic_matrix][Dynamic Matrix]]
 
-This project implements a dynamic matrix structure in C++ with support for 3D vector operations. It provides a flexible and efficient way to work with matrices of varying sizes, along with comprehensive unit tests to ensure reliability.
+Offers a dynamic matrix structure in C++ with support for 3D vector operations. It provides a flexible and efficient way to work with matrices of varying sizes, along with comprehensive unit tests to ensure reliability.
 
 *** 4. [[https://github.com/seajoyer/Doubly_Linked_List][Doubly Linked List]]
 
-This project implements a doubly linked list data structure in C++, providing a flexible and efficient way to work with linked lists, along with comprehensive unit tests.
+Implements a doubly linked list data structure in C++, providing a flexible and efficient way to work with linked lists, along with comprehensive unit tests.
