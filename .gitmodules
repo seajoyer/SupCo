@@ -19,3 +19,6 @@
 [submodule "Doubly_Linked_List"]
 	path = Doubly_Linked_List
 	url = https://github.com/seajoyer/Doubly_Linked_List
+[submodule "Numerical_integration"]
+	path = Numerical_integration
+	url = https://github.com/seajoyer/Numerical_integration
