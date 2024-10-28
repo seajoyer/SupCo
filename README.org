@@ -38,6 +38,10 @@ The project offers C++ and Python implementations of Lagrange interpolation, pac
 
 This project allows to calculate numerical derivatives in Python and C++, providing left, center, right, and asymmetric derivatives with varying precision.
 
+*** 4. [[https://github.com/seajoyer/Numerical_integration][Numerical Integration]]
+
+This project implements Numerical Integration in C++ and Python by such methods as rectangle (left, right and mid rectangles), trapezoid and Simpson.
+
 ** Engineering Computing
 
 *** 1. [[https://github.com/seajoyer/Argument_search][Argument Search]]
