@@ -22,3 +22,6 @@
 [submodule "Numerical_integration"]
 	path = Numerical_integration
 	url = https://github.com/seajoyer/Numerical_integration
+[submodule "Nonlinear_Solver"]
+	path = Nonlinear_Solver
+	url = https://github.com/seajoyer/Nonlinear_Solver
