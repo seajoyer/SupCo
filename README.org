@@ -13,7 +13,7 @@ I do not guarantee that any homework is done at least somewhat correctly, if you
   - [[#2-interpolation][Interpolation]]
   - [[#3-numerical-derivatives][Numerical Derivatives]]
   - [[#4-numerical-integration][Numerical Integration]]
-  - [[#5-nonlinear-solver][Linear Solver]]
+  - [[#5-nonlinear-solver][Nonlinear Solver]]
 - [[#engineering-computing][Engineering Computing]]
   - [[#1-argument-search][Argument Search]]
   - [[#2-vector-structure][Vector Structure]]
