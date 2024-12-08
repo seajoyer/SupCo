@@ -14,6 +14,7 @@ I do not guarantee that any homework is done at least somewhat correctly, if you
   - [[#3-numerical-derivatives][Numerical Derivatives]]
   - [[#4-numerical-integration][Numerical Integration]]
   - [[#5-nonlinear-solver][Nonlinear Solver]]
+  - [[#6-cauchy-problem][Cauchy Problem]]
 - [[#engineering-computing][Engineering Computing]]
   - [[#1-argument-search][Argument Search]]
   - [[#2-vector-structure][Vector Structure]]
@@ -47,6 +48,10 @@ This project implements Numerical Integration in C++ and Python by such methods 
 *** 5. [[https://github.com/seajoyer/Nonlinear_Solver][Nonlinear Solver]]
 
 The project implements Newton's and bisection methods to find the root of a nonlinear equation in a given interval.
+
+*** 6. [[https://github.com/seajoyer/Cauchy_problem][Cauchy Problem]]
+
+A collection of libraries for solving second-order ordinary differential equations (ODEs) using various numerical methods, including Runge-Kutta 4th order, Euler, and Adams 3rd order methods.
 
 ** Engineering Computing
 
