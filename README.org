@@ -15,6 +15,8 @@ I do not guarantee that any homework is done at least somewhat correctly, if you
   - [[#4-numerical-integration][Numerical Integration]]
   - [[#5-nonlinear-solver][Nonlinear Solver]]
   - [[#6-cauchy-problem][Cauchy Problem]]
+  - [[#7-boundary-problem][Boundary Problem]]
+  - [[#8-wave-equation][Wave Equation]]
 - [[#engineering-computing][Engineering Computing]]
   - [[#1-argument-search][Argument Search]]
   - [[#2-vector-structure][Vector Structure]]
