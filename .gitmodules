@@ -25,3 +25,9 @@
 [submodule "Nonlinear_Solver"]
 	path = Nonlinear_Solver
 	url = https://github.com/seajoyer/Nonlinear_Solver
+[submodule "Boundary_problem"]
+	path = Boundary_problem
+	url = https://github.com/seajoyer/Boundary_problem
+[submodule "Wave_equation"]
+	path = Wave_equation
+	url = https://github.com/seajoyer/Wave_equation

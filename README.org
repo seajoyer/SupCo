@@ -53,6 +53,14 @@ The project implements Newton's and bisection methods to find the root of a nonl
 
 A collection of libraries for solving second-order ordinary differential equations (ODEs) using various numerical methods, including Runge-Kutta 4th order, Euler, and Adams 3rd order methods.
 
+*** 7. [[https://github.com/seajoyer/Boundary problem][Boundary Problem]]
+
+A numerical solver for boundary value problems (BVPs) of second-order ordinary differential equations using the finite difference method.
+
+*** 8. [[https://github.com/seajoyer/Wave_equation][Wave equation]]
+
+A numerical solver for a wave equation with mixed boundary conditions. The solver includes both first and second-order accuracy methods and compares numerical solutions with the exact solution.
+
 ** Engineering Computing
 
 *** 1. [[https://github.com/seajoyer/Argument_search][Argument Search]]
