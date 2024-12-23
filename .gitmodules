@@ -31,3 +31,6 @@
 [submodule "Wave_equation"]
 	path = Wave_equation
 	url = https://github.com/seajoyer/Wave_equation
+[submodule "Thermal_equation"]
+	path = Thermal_equation
+	url = https://github.com/seajoyer/Thermal_equation

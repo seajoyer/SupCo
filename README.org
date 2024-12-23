@@ -17,6 +17,7 @@ I do not guarantee that any homework is done at least somewhat correctly, if you
   - [[#6-cauchy-problem][Cauchy Problem]]
   - [[#7-boundary-problem][Boundary Problem]]
   - [[#8-wave-equation][Wave Equation]]
+  - [[#9-thermal-equation][Thermal Equation]]
 - [[#engineering-computing][Engineering Computing]]
   - [[#1-argument-search][Argument Search]]
   - [[#2-vector-structure][Vector Structure]]
@@ -62,6 +63,10 @@ A numerical solver for boundary value problems of second-order ordinary differen
 *** 8. [[https://github.com/seajoyer/Wave_equation][Wave equation]]
 
 A numerical solver for a wave equation with mixed boundary conditions. The solver includes both first and second-order accuracy methods and compares numerical solutions with the exact solution.
+
+*** 9. [[https://github.com/seajoyer/Thermal_equation][Thermal equation]]
+
+A numerical solver for a non-homogeneous heat equation with mixed boundary conditions. The solver implements both first and second-order accuracy methods using the Thomas algorithm (tridiagonal matrix algorithm), and provides visualization tools to compare numerical solutions with the exact solution. Includes animated visualization of the solution evolution over time.
 
 ** Engineering Computing
 
